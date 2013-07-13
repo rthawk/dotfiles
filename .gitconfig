@@ -1,0 +1,27 @@
+[alias]
+    co = checkout
+    st = status
+    ci = commit -a
+    di = diff
+    br = branch
+    wc = whatchanged
+    stat = log --stat --summary
+    logg = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
+    logs = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --stat
+
+
+[user]
+	name = rthawk
+	email = rthawk@rtks.net
+[core]
+    pager = less -r
+	excludesfile = /Users/rthawk/.gitignore_global
+
+[color]
+    ui = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
