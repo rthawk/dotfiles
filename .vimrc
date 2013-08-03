@@ -1,19 +1,31 @@
 
-
 "  NeoComplCacheEnable
-    " neocomplcache.vim
+" neocomplcache.vim
 
-"---------------------------------------------------------------------------
-" TODO: .gvimrcにあるKaoriya系configでいらないものを削除
+nmap <Leader>n :NERDTreeToggle<CR>
 
+
+" extended % matching for HTML, LaTeX, and many other languages
+source $VIMRUNTIME/macros/matchit.vim
 
 "---------------------------------------------------------------------------
 " Encoding
 "---------------------------------------------------------------------------
-" set encoding=utf-8
-set fileencoding=utf-8
-set fileencodings=ucs-bom,iso-2022-jp,sjis,cp932,euc-jp,euc-jisx0213,eucjp-ms
+set encoding=utf-8
+" set fileencoding=utf-8
 
+" set fileencodings=utf-8,cp932,euc-jp
+" MacVimだとfileencodingsは不要
+" set fileencodings=ucs-bom,iso-2022-jp,sjis,cp932,euc-jp,euc-jisx0213,eucjp-ms
+
+"---------------------------------------------------------------------------
+" 
+"---------------------------------------------------------------------------
+
+" 外部のエディタで編集中のファイルが変更された場合、自動で読み込む
+set autoread
+
+set clipboard=unnamed
 
 "---------------------------------------------------------------------------
 " Vundle.vim
@@ -34,6 +46,13 @@ set fileencodings=ucs-bom,iso-2022-jp,sjis,cp932,euc-jp,euc-jisx0213,eucjp-ms
  Bundle 'mattn/zencoding-vim'
  Bundle 'nanotech/jellybeans.vim'
 
+ " Syntax checking 
+ Bundle 'Syntastic'
+ let g:syntastic_enable_signs=1
+ let g:syntastic_auto_loc_list=2
+ set statusline+=%#warningmsg#
+ set statusline+=%{SyntasticStatuslineFlag()}
+ set statusline+=%*
 
  " ref.vim
  Bundle 'thinca/vim-ref'
@@ -46,16 +65,35 @@ set fileencodings=ucs-bom,iso-2022-jp,sjis,cp932,euc-jp,euc-jisx0213,eucjp-ms
 
  Bundle 'thinca/vim-quickrun'
  Bundle 'Shougo/unite.vim'
+ Bundle 'kana/vim-fakeclip'
+
+ " grep代替. ag入れてるときだけ有効
+ Bundle 'rking/ag.vim'
+
+ "Bundle 'jacquesbh/vim-showmarks'
+
+ Bundle 'h1mesuke/unite-outline'
 
  " vim-scripts repos
  Bundle 'mru.vim'
  Bundle 'surround.vim'
  Bundle 'taglist.vim'
- Bundle 'neocomplcache'
+ Bundle 'renamer.vim'
+
+ "Bundle 'neocomplcache'
  Bundle 'The-NERD-tree'
  Bundle 'The-NERD-Commenter'
- " うまくいかなかったBundle 'filtering.vim'
- "Bundle 'project.vim'
+
+ " color scheme
+ Bundle 'w0ng/vim-hybrid'
+
+ " Bundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
+ " set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
+
+
+ "うまくいかなかった
+ "Bundle 'filtering.vim'
+ "Bundle 'kana/vim-textobj-line'
  "Bundle 'openbrowser.vim'
 
  " non github repos
@@ -72,6 +110,5 @@ set fileencodings=ucs-bom,iso-2022-jp,sjis,cp932,euc-jp,euc-jisx0213,eucjp-ms
  " NOTE: comments after Bundle command are not allowed..
 
 "---------------------------------------------------------------------------
-
 
 so ~/Dropbox/config/vimrc_common
