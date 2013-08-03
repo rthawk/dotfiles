@@ -1,27 +1,18 @@
-"2.2 (created: 2009/10/28 19:04:27)
-
-" vim: set ft=vimperator:
 
 set runtimepath=~/Dropbox/config/dotfiles/.vimperator/
 
-" vimperatrorcリロード
-map ,s :so ~/.vimperatorrc<CR>
+set titlestring=""
 
-" クイックヒントモードでMigemoを使えるようにする。
-" set hintmatching=custom
-
-" GUI関係の表示（ブックマークとスクロールバー）
-" set guioptions=mrbn
-
-" IMEの自動切り替え
-let g:ex_ime_mode = "inactive"
-let g:textarea_ime_mode = "inactive"
-
-" ヒントをアルファベットで
+" hint with alphabet
 set hintchars=ifjklasdhguonmerwc
 
+" reload vimperatrorc
+map ,s :so ~/.vimperatorrc<CR>\
+echo "reloaded vimperatorrc"
 
-
+" set gui=addons,tabs,nobookmarks,nomenu,nonavigation
+set noautocomplete
+set complete+=slhbSH
 
 " hjklの移動範囲を増やす
 noremap h 5h
@@ -29,15 +20,19 @@ noremap j 5j
 noremap k 5k
 noremap l 5l
 
-" コマンドライン
+" command mode cursor
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
-"copy.jsの設定
-noremap ,c :copy titleAndURL<CR><ESC>
-
 " ignoreALLkeysを押しやすい位置に配置
 map ,` <S-ESC>
+
+"plugin : copy.js
+noremap ,c :copy titleAndURL<CR><ESC>
+
+" plugin : IMEの自動切り替え
+let g:ex_ime_mode = "inactive"
+let g:textarea_ime_mode = "inactive"
 
 " はてなブックマーク導入後 はてぶをvimperator上で操作しやすくする
 " http://d.hatena.ne.jp/ir5/20090711/1247265605
@@ -48,121 +43,13 @@ map ,` <S-ESC>
 "    * :hbt ：↑のタブで開く版
 javascript if (typeof hBookmark != 'undefined') liberator.loadScript('chrome://hatenabookmark/content/vimperator/plugin/hatenabookmark.js', {__proto__: this}); 
 
-
-" 補完リストは検索エンジンと履歴
-" オートコンプリート関係
-" s 検索エンジンのん
-" f ローカルファイル
-" b ブックマーク
-" h 履歴
-" l ロケーションバー(ブックマーク、履歴)
-" S 検索サジェスト
-set complete+=slhbSf
+" statusline-toolbar.js
+" sbmcommentviewer.js
 
 
-" オートコンプリートOFF
-set noautocomplete
+" ------------------------------
+" GUI style
+hi Hint z-index:5000; font-family:Menlo; font-size:15px; font-weight:bold; color:white; background-color:#6BA7EF; border-width:0px; border-style:solid; padding:0px 2px 0px 2px; position:absolute;text-transform: uppercase;
 
-
-" MacでのWikipediaなんかのキーが効かなくなる問題を解決
-set! ui.key.contentAccess=5
-
-" Mac標準のキーを使えるように
-noremap <M-c> <C-v><M-c>
-inoremap <M-a> <C-v><M-a>
-inoremap <M-z> <C-v><M-z>
-inoremap <M-x> <C-v><M-x>
-inoremap <M-c> <C-v><M-c>
-inoremap <M-v> <C-v><M-v>
-cnoremap <M-a> <C-v><M-a>
-cnoremap <M-z> <C-v><M-z>
-cnoremap <M-x> <C-v><M-x>
-cnoremap <M-c> <C-v><M-c>
-cnoremap <M-v> <C-v><M-v>
- 
-" Windows標準のキーを使えるように
-noremap <C-c> <C-v><C-c>
-inoremap <C-a> <C-v><C-a>
-inoremap <C-z> <C-v><C-z>
-inoremap <C-x> <C-v><C-x>
-inoremap <C-c> <C-v><C-c>
-inoremap <C-v> <C-v><C-v>
-cnoremap <C-a> <C-v><C-a>
-cnoremap <C-z> <C-v><C-z>
-cnoremap <C-x> <C-v><C-x>
-cnoremap <C-c> <C-v><C-c>
-cnoremap <C-v> <C-v><C-v>
-
-""ヒントのフォントサイズを大きく
-hi Hint z-index:5000; font-family:Menlo; font-size:15px; font-weight:bold; color:white; background-color:red; border-color:ButtonShadow; border-width:1px; border-style:solid; padding:0px 2px 0px 2px; position:absolute;text-transform: uppercase;
-
-
-"" ステータスバーのフォントサイズを大きくする
-style chrome://* <<EOM
-#liberator-statusline {
-    font-family: Menlo, Consolas, Monaco, monospace !important;
-    font-weight: normal !important;
-    font-size: 10pt !important;
-    padding:2px 2px !important;
-}
-EOM
-
-"" ステータスバー
-"hi StatusLine color: #000; background: #BBB; font-weight: normal; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace;
-"hi StatusLineSecure color: #000; background: #9CF; font-weight: normal;
-"hi StatusLineExtended color: #000; background: #9FF; font-weight: normal;
-"hi StatusLineBroken color: #FFF; background: #900; font-weight: normal;
-
-"" コマンドライン
-"hi CmdLine color: #000; background: #FFF; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; padding: 2px;
-"hi Normal color: #000; background: #FFF; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " 通常時テキスト
-"hi InfoMsg color: #000; background: #FFF; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; "通知メッセージ
-"hi ModeMsg color: #000; background: #FFF; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; "モード表示
-"hi MoreMsg color: #000; background: #FFF; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; "さらにモード表示
-"hi ErrorMsg color: #FFF; background: #F00; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " エラーメッセージ
-"hi LineNr color: #F00; background: #FFF; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " エラーの行番号
-
-"" 補完リスト
-"hi CompTitle font-weight: bold; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " タイトル
-"hi CompResult width: 45%; overflow: hidden; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " 結果欄（左側）
-"hi CompDesc width: 50%; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " 説明欄（右側）
-"hi CompItem font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " 補完リストの1行
-"hi CompItem[selected] color: #FFF; background: #000; font-weight: normal; font-size: 10pt; font-family: Menlo, Consolas, Monaco, monospace; " 補完リストの選択している行
-"hi Filter color: #06E; font-weight: bold; " 補完リストでマッチしたテキスト
-
-" -- vimperator colorscheme --
-" name: vimpwhite
-" author: tlync<Takuya Fujimura>
-" tested: vimperator 3.0, firefox 4.0, mac osx 10.6
-" ----------------------------
-
-"" Status Line
-hi StatusLine color: #666;
-"
-"" Command Line
-hi ContentSeparator border-top: 1px dotted #ccc;
-hi CmdLine -append font-size: 15px;
-hi PromptText font-family: "Lucida Grande", "Segoe UI", monospace; background: -moz-linear-gradient(top, #6BA7EF, #3163AA); color: white; border: 1px solid #3366AD; padding: 0 7px; margin-right: 5px; border-top: none;
-
-" hi PromptText font-family: "Lucida Grande", "Segoe UI", monospace; background: -moz-linear-gradient(top, #6BA7EF, #3163AA); text-shadow: 1px 1px #1D3C66; color: white; border: 1px solid #3366AD; padding: 0 7px; margin-right: 5px; border-top: none;
-
-"
-"" Comp
-hi CompTitle>* -append border-bottom-color: #8C8C8C;
-"hi CompResult -append font-family: "Lucida Grande", "Segoe UI", sans-serif !important;
-"hi CompDesc -append font-family: "Lucida Grande", "Segoe UI", sans-serif; color: #666;
-hi Filter -append border: none;
-"hi CompTitle -moz-appearance: statusbar; font-family: "Lucida Grande", "Segoe UI", monospace; font-weight: bold; text-indent: 5px; height: 20px;
-"hi Tag:not(:empty) color: #355D93; background-color: #E6F2FC; border-radius: 2px; padding: 1px 2px; font-size: 10px;
-"
-"" Hint
-hi HintElem background-color: #fffac6;
-hi Hint font-family: "Lucida Grande", "Segoe UI", sans-serif; font-size: 11px; font-weight: bold; background-color:#6BA7EF; text-transform: uppercase; color: white; padding: 2px 5px;  border: 1px solid #3366AD;
-" hi Hint font-family: "Lucida Grande", "Segoe UI", sans-serif; font-size: 11px; font-weight: bold; background-color:#6BA7EF; text-shadow: 0 1px #1D3C66; text-transform: uppercase; color: white; padding: 2px 5px;  border: 1px solid #3366AD;
-
-" for statusline-toolbar.js
-style -name toolbar-background chrome://* #liberator-customize-toolbar { padding-left: 5px !important; -moz-appearance: none !important; }
-
-"" for sbmcommentviewer.js
-"" style -name sbmcommentviewer chrome://* .liberator-sbmcommentsviewer-content { border-color: #ccc !important; }
+hi CmdLine font-size: 15px;
 
