@@ -53,3 +53,4 @@ hi Hint z-index:5000; font-family:Menlo; font-size:15px; font-weight:bold; color
 
 hi CmdLine font-size: 15px;
 
+hi PromptText background: #6BA7EF; color: white;
