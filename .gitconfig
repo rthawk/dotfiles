@@ -16,6 +16,7 @@
 [core]
     pager = less -r
 	excludesfile = /Users/rthawk/.gitignore_global
+	editor = /usr/bin/vim
 
 [color]
     ui = true
