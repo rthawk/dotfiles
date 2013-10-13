@@ -3,6 +3,9 @@ if [ -f ~/.shrc ] ; then
     . ~/.shrc
 fi
 
+# keymode 
+bindkey -e
+
 # 重複したパスを登録しない
 typeset -U path
 
