@@ -63,6 +63,11 @@ set clipboard=unnamed
  " git補助
  Bundle 'tpope/vim-fugitive'
 
+ " gitの差分を表示する
+ Bundle 'airblade/vim-gitgutter'
+ nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
+ nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
+
  Bundle 'thinca/vim-quickrun'
  Bundle 'Shougo/unite.vim'
  Bundle 'kana/vim-fakeclip'
