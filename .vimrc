@@ -43,7 +43,7 @@ set clipboard=unnamed
  " My Bundles here:
  "
  " original repos on github
- Bundle 'mattn/zencoding-vim'
+ Bundle 'mattn/emmet-vim'
  Bundle 'nanotech/jellybeans.vim'
 
  " Syntax checking 
