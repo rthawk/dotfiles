@@ -70,6 +70,8 @@ set clipboard=unnamed
 
  Bundle 'thinca/vim-quickrun'
  Bundle 'Shougo/unite.vim'
+ Bundle 'h1mesuke/unite-outline'
+
  Bundle 'kana/vim-fakeclip'
 
  " grep代替. ag入れてるときだけ有効
@@ -77,7 +79,6 @@ set clipboard=unnamed
 
  "Bundle 'jacquesbh/vim-showmarks'
 
- Bundle 'h1mesuke/unite-outline'
 
  " vim-scripts repos
  Bundle 'mru.vim'
