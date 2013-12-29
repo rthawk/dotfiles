@@ -17,6 +17,7 @@ SAVEHIST=30000
 HISTTIMEFORMAT='%Y%m%d %T ';
 export HISTTIMEFORMAT
 
+export EDITOR=/usr/bin/vim
 
 # homebrew
 export PATH=/usr/local/bin:$PATH
