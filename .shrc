@@ -25,8 +25,15 @@ export PATH="$PATH:/usr/local/sbin"
 
 export PATH=/usr/local/share/python:$PATH
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# tmuxinator
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+
+# rbenv
+# if which -s rbenv ; then
+if which rbenv > /dev/null ; then
+    export PATH="$HOME/.rbenv/shims:$PATH"
+    eval "$(rbenv init -)"
+fi
 
 
 #+---------------------------------------------------------+

@@ -10,7 +10,6 @@ export HISTCONTROL=ignoreboth
 . /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 # bash-completion
-# ln -s "/usr/local/Library/Contributions/brew_bash_completion.sh" "/usr/local/etc/bash_completion.d"
 if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
