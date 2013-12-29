@@ -62,3 +62,4 @@ if [ -e /Applications/MacVim.app/Contents/MacOS/Vim ] ; then
   alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 fi
 
+# vim:set filetype=sh:
