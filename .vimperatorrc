@@ -12,7 +12,7 @@ echo "reloaded vimperatorrc"
 
 " set gui=addons,tabs,nobookmarks,nomenu,nonavigation
 set noautocomplete
-set complete+=slhbSH
+set complete+=slhbS
 
 " hjklの移動範囲を増やす
 noremap h 5h
