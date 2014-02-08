@@ -1,9 +1,5 @@
 
-"  NeoComplCacheEnable
-" neocomplcache.vim
-
 nmap <Leader>n :NERDTreeToggle<CR>
-
 
 " extended % matching for HTML, LaTeX, and many other languages
 source $VIMRUNTIME/macros/matchit.vim
