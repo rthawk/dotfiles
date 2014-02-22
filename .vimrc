@@ -42,6 +42,8 @@ set clipboard=unnamed
  Bundle 'mattn/emmet-vim'
  Bundle 'nanotech/jellybeans.vim'
 
+ Bundle 'kchmck/vim-coffee-script'
+
  " Syntax checking 
  Bundle 'Syntastic'
  let g:syntastic_enable_signs=1
