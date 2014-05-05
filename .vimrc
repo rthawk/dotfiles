@@ -68,6 +68,7 @@ set clipboard=unnamed
 
  Bundle 'thinca/vim-quickrun'
  Bundle 'Shougo/unite.vim'
+ Bundle 'Shougo/neomru.vim'
  Bundle 'h1mesuke/unite-outline'
  Bundle 'basyura/unite-rails'
 
