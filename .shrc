@@ -30,14 +30,6 @@ export PATH=/usr/local/share/python:$PATH
 # tmuxinator
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 
-# rbenv
-# if which -s rbenv ; then
-if which rbenv > /dev/null ; then
-    export PATH="$HOME/.rbenv/shims:$PATH"
-    eval "$(rbenv init -)"
-fi
-
-
 #+---------------------------------------------------------+
 # grep
 #+---------------------------------------------------------+
