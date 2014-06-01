@@ -18,6 +18,7 @@ HISTTIMEFORMAT='%Y%m%d %T ';
 export HISTTIMEFORMAT
 
 export EDITOR=/usr/bin/vim
+export BUNDLER_EDITOR=vim
 
 # homebrew
 export PATH=/usr/local/bin:$PATH
