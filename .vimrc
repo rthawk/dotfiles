@@ -96,9 +96,12 @@ set clipboard=unnamed
  " color scheme
  Bundle 'w0ng/vim-hybrid'
 
+ Bundle 'itchyny/calendar.vim'
+ let g:calendar_google_calendar = 1
+ let g:calendar_google_task = 1
+
  " Bundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
  " set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
-
 
  "うまくいかなかった
  "Bundle 'filtering.vim'
