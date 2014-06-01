@@ -1,4 +1,4 @@
-
+let NERDTreeHijackNetrw=0
 nmap <Leader>n :NERDTreeToggle<CR>
 
 " hide netrw header ( toggle I )
