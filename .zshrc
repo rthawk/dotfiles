@@ -9,10 +9,6 @@ bindkey -e
 # 重複したパスを登録しない
 typeset -U path
 
-# 補完機能
-autoload -U compinit
-compinit
-
 # 補完style
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
@@ -71,6 +67,21 @@ fi
 # zsh completion
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+# rbenv
+# if which -s rbenv ; then
+if which rbenv > /dev/null ; then
+    export PATH="$HOME/.rbenv/shims:$PATH"
+    eval "$(rbenv init - zsh)"
+fi
+
 # powerline for zsh
 . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# completion init
+autoload -U compinit
+compinit
+
+manbash () {
+    man -P "less +/\ \ \ $1" bash
+}
 
