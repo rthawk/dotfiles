@@ -1,6 +1,9 @@
 
 nmap <Leader>n :NERDTreeToggle<CR>
 
+" hide netrw header ( toggle I )
+let g:netrw_banner=0
+
 " extended % matching for HTML, LaTeX, and many other languages
 source $VIMRUNTIME/macros/matchit.vim
 
