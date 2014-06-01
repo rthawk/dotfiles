@@ -38,7 +38,7 @@ export PATH=/usr/local/share/python:$PATH
 export GREP_OPTIONS
 
 # バイナリファイルにはマッチさせない
-GREP_OPTIONS="--binary-files=without-match"
+export GREP_OPTIONS="--binary-files=without-match"
 
 # grep対象としてディレクトリを指定したらディレクトリ内を再帰的にgrep
 # GREP_OPTIONS="--directories=recurse $GREP_OPTIONS"
@@ -51,6 +51,8 @@ GREP_OPTIONS="--exclude=tags $GREP_OPTIONS"
 
 alias ll='ls -l'
 alias p="popd"
+
+alias g='grep'
 
 alias ctags="`brew --prefix`/bin/ctags"
 
