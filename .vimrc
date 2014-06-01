@@ -87,6 +87,7 @@ set clipboard=unnamed
  Bundle 'mru.vim'
  Bundle 'surround.vim'
  Bundle 'taglist.vim'
+ " tagbar.vim
  Bundle 'renamer.vim'
 
  "Bundle 'neocomplcache'
