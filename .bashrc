@@ -14,4 +14,11 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     . `brew --prefix`/etc/bash_completion
 fi
 
+# rbenv
+# if which -s rbenv ; then
+if which rbenv > /dev/null ; then
+    export PATH="$HOME/.rbenv/shims:$PATH"
+    eval "$(rbenv init -)"
+fi
+
 alias cd='pushd > /dev/null'
