@@ -52,7 +52,7 @@ GREP_OPTIONS="--exclude=tags $GREP_OPTIONS"
 alias ll='ls -l'
 alias p="popd"
 
-alias g='grep'
+alias g='git'
 
 alias ctags="`brew --prefix`/bin/ctags"
 
