@@ -47,7 +47,7 @@ set clipboard=unnamed
 
  Bundle 'kchmck/vim-coffee-script'
 
- " Syntax checking 
+ " Syntax checking
  Bundle 'Syntastic'
  let g:syntastic_enable_signs=1
  let g:syntastic_auto_loc_list=2
@@ -74,7 +74,7 @@ set clipboard=unnamed
  Bundle 'thinca/vim-quickrun'
  Bundle 'Shougo/unite.vim'
  Bundle 'Shougo/neomru.vim'
- Bundle 'h1mesuke/unite-outline'
+ Bundle 'Shougo/unite-outline'
  Bundle 'basyura/unite-rails'
 
  Bundle 'kana/vim-fakeclip'
@@ -98,6 +98,11 @@ set clipboard=unnamed
 
  " color scheme
  Bundle 'w0ng/vim-hybrid'
+
+ Bundle 'bronson/vim-trailing-whitespace'
+ Bundle 'vim-scripts/AnsiEsc.vim'
+
+ Bundle 'vim-ruby/vim-ruby'
 
  Bundle 'itchyny/calendar.vim'
  let g:calendar_google_calendar = 1
