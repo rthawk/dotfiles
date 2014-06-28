@@ -61,6 +61,8 @@ set clipboard=unnamed
 " rails.vim
  Bundle 'tpope/vim-rails.git'
 
+ Bundle 'tpope/vim-endwise'
+
  " git補助
  Bundle 'tpope/vim-fugitive'
 
