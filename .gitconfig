@@ -1,13 +1,17 @@
 [alias]
     co = checkout
     st = status
+    s  = status -s
     ci = commit -a
-    di = diff
+    d = diff
+    dc = diff --cache
     br = branch
     wc = whatchanged
     stat  = log --stat --summary
     logg  = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
     logs  = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --stat
+    logb  = log --branches --remotes --tags --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --oneline
+    loga  = log --branches --remotes --tags --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
     graph = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short 
 
 
