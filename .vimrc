@@ -1,8 +1,15 @@
-let NERDTreeHijackNetrw=0
-nmap <Leader>n :NERDTreeToggle<CR>
-
 " hide netrw header ( toggle I )
 let g:netrw_banner=0
+
+" netrwは常にtree view ( toggle i )
+let g:netrw_liststyle = 3
+
+" 'v'でファイルを開くときは右側に開く(default left)
+let g:netrw_altv = 1
+
+" 'o'でファイルを開くときは下側に開く(default upper)
+let g:netrw_alto = 1
+
 
 " extended % matching for HTML, LaTeX, and many other languages
 source $VIMRUNTIME/macros/matchit.vim
@@ -93,7 +100,6 @@ set clipboard=unnamed
  Bundle 'renamer.vim'
 
  "Bundle 'neocomplcache'
- Bundle 'The-NERD-tree'
  Bundle 'The-NERD-Commenter'
 
  " color scheme
