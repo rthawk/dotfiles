@@ -85,3 +85,10 @@ manbash () {
     man -P "less +/\ \ \ $1" bash
 }
 
+# path separate
+autoload -U select-word-style
+select-word-style default
+zstyle ':zle:*' word-chars " /=;@:{},|"
+zstyle ':zle:*' word-style unspecified
+
+
