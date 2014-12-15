@@ -89,6 +89,8 @@ set clipboard=unnamed
  Bundle 'basyura/unite-rails'
 
  Bundle 'kana/vim-fakeclip'
+ Bundle 'kana/vim-textobj-user'
+ Bundle 'nelstrom/vim-textobj-rubyblock'
 
  " grep代替. ag入れてるときだけ有効
  Bundle 'rking/ag.vim'
