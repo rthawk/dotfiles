@@ -2,9 +2,11 @@
     co = checkout
     st = status
     s  = status -s
+    cv = commit -v
     ci = commit -a
+    civ = commit -av
     d = diff
-    dc = diff --cache
+    dc = diff --cached
     br = branch
     wc = whatchanged
     stat  = log --stat --summary
@@ -22,6 +24,8 @@
     pager = less -r
 	excludesfile = /Users/rthawk/.gitignore_global
 	editor = /usr/bin/vim
+[pager]
+    grep = false
 
 [color]
     ui = true
