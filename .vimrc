@@ -136,7 +136,6 @@ endif
  " tagbar.vim
  Bundle 'renamer.vim'
 
- "Bundle 'neocomplcache'
  Bundle 'The-NERD-Commenter'
 
  " color scheme
