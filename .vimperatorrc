@@ -34,15 +34,6 @@ noremap ,c :copy titleAndURL<CR><ESC>
 let g:ex_ime_mode = "inactive"
 let g:textarea_ime_mode = "inactive"
 
-" はてなブックマーク導入後 はてぶをvimperator上で操作しやすくする
-" http://d.hatena.ne.jp/ir5/20090711/1247265605
-"    * c ：ブクマ追加表示
-"    * C ：ブクマコメント表示
-"    * :hb ：ブクマトップにジャンプ
-"    * :hb keyword：ブクマ内で検索できる
-"    * :hbt ：↑のタブで開く版
-javascript if (typeof hBookmark != 'undefined') liberator.loadScript('chrome://hatenabookmark/content/vimperator/plugin/hatenabookmark.js', {__proto__: this}); 
-
 " statusline-toolbar.js
 " sbmcommentviewer.js
 
