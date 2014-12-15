@@ -73,6 +73,9 @@ set clipboard=unnamed
  " git補助
  Bundle 'tpope/vim-fugitive'
 
+ Bundle 'AndrewRadev/switch.vim'
+ nnoremap - :Switch<cr>
+
  " gitの差分を表示する
  Bundle 'airblade/vim-gitgutter'
  nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
