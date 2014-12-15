@@ -74,9 +74,6 @@ if which rbenv > /dev/null ; then
     eval "$(rbenv init - zsh)"
 fi
 
-# powerline for zsh
-. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-
 # completion init
 autoload -U compinit
 compinit
