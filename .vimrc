@@ -106,6 +106,8 @@ set clipboard=unnamed
  Bundle 'w0ng/vim-hybrid'
 
  Bundle 'bronson/vim-trailing-whitespace'
+ let g:extra_whitespace_ignored_filetypes = ["unite"]
+
  Bundle 'vim-scripts/AnsiEsc.vim'
 
  Bundle 'vim-ruby/vim-ruby'
