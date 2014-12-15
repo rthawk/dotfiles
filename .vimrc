@@ -111,6 +111,10 @@ set clipboard=unnamed
  Bundle 'vim-scripts/AnsiEsc.vim'
 
  Bundle 'vim-ruby/vim-ruby'
+ Bundle 'pangloss/vim-javascript'
+
+ Bundle 'tpope/vim-markdown'
+ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
  Bundle 'itchyny/calendar.vim'
  let g:calendar_google_calendar = 1
