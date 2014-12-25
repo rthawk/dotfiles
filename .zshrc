@@ -75,8 +75,7 @@ if which rbenv > /dev/null ; then
 fi
 
 # completion init
-autoload -U compinit
-compinit
+autoload -U compinit && compinit
 
 manbash () {
     man -P "less +/\ \ \ $1" bash
