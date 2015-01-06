@@ -3,7 +3,7 @@ if [ -f ~/.shrc ] ; then
     . ~/.shrc
 fi
 
-# keymode 
+# keymode
 bindkey -e
 
 # 重複したパスを登録しない
@@ -38,7 +38,7 @@ bindkey '^N' history-beginning-search-forward
 
 # プロンプトの設定
 #PS1="[${USER}@${HOST%%.*} %1~]%(!.#.$) "
-PS1="[${USER}@%m %1~]%(!.#.$) "
+PS1="[${USER}@%m %1~%(1j, job:%j,)]%(!.#.$) "
 
 
 #文字コードの設定
