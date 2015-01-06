@@ -87,4 +87,7 @@ select-word-style default
 zstyle ':zle:*' word-chars " /=;@:{},|"
 zstyle ':zle:*' word-style unspecified
 
+# named directories
+hash -d src=~/Dropbox/src/
+
 
