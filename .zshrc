@@ -87,6 +87,11 @@ select-word-style default
 zstyle ':zle:*' word-chars " /=;@:{},|"
 zstyle ':zle:*' word-style unspecified
 
+
+# auto cd
+setopt AUTO_CD
+cdpath=(.. ~)
+
 # named directories
 hash -d src=~/Dropbox/src/
 
