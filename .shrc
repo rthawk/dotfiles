@@ -8,10 +8,11 @@ export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
 
 # history on memory
-HISTSIZE=10000
+export HISTSIZE=10000
 
 # history on histfile
-SAVEHIST=30000
+export SAVEHIST=20000
+export HISTFILESIZE=20000
 
 # historyに時刻追加
 HISTTIMEFORMAT='%Y%m%d %T ';
