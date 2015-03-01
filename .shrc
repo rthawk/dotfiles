@@ -57,7 +57,7 @@ GREP_OPTIONS="--exclude=tags $GREP_OPTIONS"
 # alias
 #+---------------------------------------------------------+
 
-alias ll='ls -l'
+alias ll='ls -hl'
 alias p="popd"
 
 alias g='git'
