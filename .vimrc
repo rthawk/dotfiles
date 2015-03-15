@@ -152,13 +152,6 @@ endif
  Bundle 'tpope/vim-markdown'
  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
- Bundle 'itchyny/calendar.vim'
- let g:calendar_google_calendar = 1
- let g:calendar_google_task = 1
-
- " Bundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
- " set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/vim
-
  "うまくいかなかった
  "Bundle 'filtering.vim'
  "Bundle 'kana/vim-textobj-line'
@@ -202,8 +195,6 @@ if has('lua') && exists('g:loaded_neocomplete')
         " For no inserting <CR> key.
         "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
     endfunction
-    " <TAB>: completion.
-    inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
     " <C-h>, <BS>: close popup and delete backword char.
     inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
     inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
