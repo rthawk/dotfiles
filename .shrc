@@ -38,6 +38,11 @@ if [[ -f $HOME/.nodebrew/nodebrew ]]; then
     export PATH=$HOME/.nodebrew/current/bin:$PATH
 fi
 
+# golang
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
 #+---------------------------------------------------------+
 # grep
 #+---------------------------------------------------------+
