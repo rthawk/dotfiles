@@ -1,0 +1,8 @@
+escape ^Tt
+hardstatus alwayslastline '%{= kw}%02c:%s %{= .y}%H %L=%{= .b}%-w%46>%{= .r}%n %t*%{= .b}%+w%-16=%{= .y}[%l]'
+
+# base-index from 1
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10
+screen 1
