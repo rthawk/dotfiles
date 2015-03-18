@@ -1,3 +1,4 @@
+#!/bin/bash
 # common file for bash, zsh,etc.. all other shell
 
 # C-s で画面が停止するのをやめる. 代わりに履歴検索が使える
@@ -31,7 +32,7 @@ export PATH=/usr/local/share/python:$PATH
 [[ -s /usr/local/bin/ghc-pkg ]] && export PATH=~/.cabal/bin:$PATH
 
 # tmuxinator
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
+[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source "$HOME/.tmuxinator/scripts/tmuxinator"
 
 # nodebrew
 if [[ -f $HOME/.nodebrew/nodebrew ]]; then
