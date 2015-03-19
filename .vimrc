@@ -224,5 +224,7 @@ if has('lua') && exists('g:loaded_neocomplete')
 
 endif
 
+" golang
+exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 
 so ~/Dropbox/config/vimrc_common
