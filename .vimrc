@@ -117,6 +117,7 @@ if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
 
+ Bundle 'yuku-t/unite-git'
  Bundle 'basyura/unite-rails'
 
  Bundle 'kana/vim-fakeclip'
