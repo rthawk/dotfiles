@@ -1,4 +1,5 @@
 [alias]
+    aa = add -A
     co = checkout
     st = status
     s  = status -s
