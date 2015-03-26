@@ -67,6 +67,7 @@ alias ll='ls -hl'
 alias p="popd"
 
 alias g='git'
+alias gn='git --no-pager'
 
 alias ctags="`brew --prefix`/bin/ctags"
 
