@@ -31,7 +31,7 @@ set encoding=utf-8
 " 外部のエディタで編集中のファイルが変更された場合、自動で読み込む
 set autoread
 
-set clipboard=unnamed,autoselect
+set clipboard=unnamed
 
 "---------------------------------------------------------------------------
 " Vundle.vim
