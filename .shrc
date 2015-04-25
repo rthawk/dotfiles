@@ -48,16 +48,14 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 # grep
 #+---------------------------------------------------------+
 
-# grepデフォルトオプションの設定
-export GREP_OPTIONS
-
-# バイナリファイルにはマッチさせない
 export GREP_OPTIONS="--binary-files=without-match"
+export GREP_OPTIONS="--exclude=tags $GREP_OPTIONS"
 
-# grep対象としてディレクトリを指定したらディレクトリ内を再帰的にgrep
-# GREP_OPTIONS="--directories=recurse $GREP_OPTIONS"
+for pattern in .cvs .git .hg .svn; do
+    export GREP_OPTIONS="--exclude-dir=$pattern $GREP_OPTIONS"
+done
 
-GREP_OPTIONS="--exclude=tags $GREP_OPTIONS"
+alias grep='grep --color=auto'
 
 #+---------------------------------------------------------+
 # alias

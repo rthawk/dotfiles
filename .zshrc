@@ -44,15 +44,6 @@ PS1="[${USER}@%m %1~%(1j, job:%j,)]%(!.#.$) "
 #文字コードの設定
 export LANG=ja_JP.UTF-8
 
-### 管理用ディレクトリを無視する
-GREP_OPTIONS="--exclude-dir=.svn $GREP_OPTIONS"
-GREP_OPTIONS="--exclude-dir=.git $GREP_OPTIONS"
-
-### 可能なら色をつける
-if grep --help 2>&1 | grep -q -- --color; then
-GREP_OPTIONS="--color=auto $GREP_OPTIONS"
-fi
-
 # lessを色付け表示させる 要source-highlight
 EXISTS_SOURCE_HIGHLIGHT='/usr/local/Cellar/source-highlight'
 if [ -e $EXISTS_SOURCE_HIGHLIGHT ]; then
