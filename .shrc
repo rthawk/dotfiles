@@ -75,11 +75,6 @@ alias jman='env LANG=ja_JP.UTF-8 man'
 
 alias be="bundle exec"
 
-# MacVimがあるときは使う
-if [ -e /Applications/MacVim.app/Contents/MacOS/Vim ] ; then
-  alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-fi
-
 if [ -e "`brew --prefix`/bin/emacs" ] ; then
   alias e="`brew --prefix`/bin/emacs"
 fi
