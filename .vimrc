@@ -127,6 +127,12 @@ endif
  " grep代替. ag入れてるときだけ有効
  Bundle 'rking/ag.vim'
 
+ Bundle 'majutsushi/tagbar'
+
+ Bundle 'epeli/slimux'
+ map <C-c><C-c>  :SlimuxREPLSendLine<CR>
+ vmap <C-c><C-c> :SlimuxREPLSendSelection<CR>
+
  "Bundle 'jacquesbh/vim-showmarks'
 
 
@@ -134,8 +140,6 @@ endif
  Bundle 'mru.vim'
  Bundle 'surround.vim'
  Bundle 'taglist.vim'
- " tagbar.vim
- Bundle 'renamer.vim'
 
  Bundle 'The-NERD-Commenter'
 
