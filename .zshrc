@@ -7,7 +7,7 @@ fi
 bindkey -e
 
 # 重複したパスを登録しない
-typeset -U path
+typeset -U path PATH
 
 # 補完style
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
