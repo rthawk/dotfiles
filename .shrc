@@ -73,6 +73,9 @@ alias be="bundle exec"
 
 type emacs >& /dev/null && alias e=emacs
 
+# experimental settings
+if [ -f ~/.privaterc.sh ] ; then
+    . ~/.privaterc.sh
 fi
 
 # vim:set filetype=sh:
