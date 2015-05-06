@@ -150,10 +150,16 @@ endif
 
  Plugin 'vim-scripts/AnsiEsc.vim'
 
- Bundle 'vim-ruby/vim-ruby'
- Bundle 'pangloss/vim-javascript'
+ Plugin 'vim-ruby/vim-ruby'
+ let g:rubycomplete_buffer_loading = 1
+ let g:rubycomplete_classes_in_global = 1
+ let g:rubycomplete_rails = 1
+ let g:rubycomplete_load_gemfile = 1
+ let g:rubycomplete_use_bundler = 1
 
- Bundle 'tpope/vim-markdown'
+ Plugin 'pangloss/vim-javascript'
+
+ Plugin 'tpope/vim-markdown'
  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
  "うまくいかなかった
