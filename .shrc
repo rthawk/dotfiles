@@ -49,7 +49,7 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GREP_OPTIONS="--binary-files=without-match"
 export GREP_OPTIONS="--exclude=tags $GREP_OPTIONS"
 
-for pattern in .cvs .git .hg .svn; do
+for pattern in .cvs .git .hg .svn .idea; do
     export GREP_OPTIONS="--exclude-dir=$pattern $GREP_OPTIONS"
 done
 
