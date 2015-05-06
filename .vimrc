@@ -44,18 +44,18 @@ set clipboard=unnamed
 
  " let Vundle manage Vundle
  " required!
- Bundle 'gmarik/vundle'
+ Plugin 'gmarik/vundle'
 
  " My Bundles here:
  "
  " original repos on github
- Bundle 'mattn/emmet-vim'
- Bundle 'nanotech/jellybeans.vim'
+ Plugin 'mattn/emmet-vim'
+ Plugin 'nanotech/jellybeans.vim'
 
- Bundle 'kchmck/vim-coffee-script'
+ Plugin 'kchmck/vim-coffee-script'
 
  " Syntax checking
- Bundle 'Syntastic'
+ Plugin 'Syntastic'
  let g:syntastic_enable_signs=1
  let g:syntastic_auto_loc_list=2
  set statusline+=%#warningmsg#
@@ -63,34 +63,34 @@ set clipboard=unnamed
  set statusline+=%*
 
  " ref.vim
- Bundle 'thinca/vim-ref'
+ Plugin 'thinca/vim-ref'
 
 " rails.vim
- Bundle 'tpope/vim-rails.git'
+ Plugin 'tpope/vim-rails.git'
 
- Bundle 'tpope/vim-endwise'
+ Plugin 'tpope/vim-endwise'
 
  " git補助
- Bundle 'tpope/vim-fugitive'
+ Plugin 'tpope/vim-fugitive'
 
- Bundle 'AndrewRadev/switch.vim'
+ Plugin 'AndrewRadev/switch.vim'
  nnoremap - :Switch<cr>
 
  " gitの差分を表示する
- Bundle 'airblade/vim-gitgutter'
+ Plugin 'airblade/vim-gitgutter'
  nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
  nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
 
- Bundle 'thinca/vim-quickrun'
- Bundle 'Shougo/unite.vim'
- Bundle 'Shougo/vimproc'
- Bundle 'Shougo/neomru.vim'
- Bundle 'Shougo/unite-outline'
+ Plugin 'thinca/vim-quickrun'
+ Plugin 'Shougo/unite.vim'
+ Plugin 'Shougo/vimproc'
+ Plugin 'Shougo/neomru.vim'
+ Plugin 'Shougo/unite-outline'
 
- Bundle 'honza/vim-snippets'
+ Plugin 'honza/vim-snippets'
  if has('lua')
    Bundle 'Shougo/neocomplete'
-   Bundle 'Shougo/neosnippet'
+   Plugin 'Shougo/neosnippet'
  endif
 
  " Enable snipMate compatibility feature.
@@ -117,39 +117,38 @@ if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
 
- Bundle 'yuku-t/unite-git'
- Bundle 'basyura/unite-rails'
+ Plugin 'yuku-t/unite-git'
+ Plugin 'basyura/unite-rails'
 
- Bundle 'kana/vim-fakeclip'
- Bundle 'kana/vim-textobj-user'
- Bundle 'nelstrom/vim-textobj-rubyblock'
+ Plugin 'kana/vim-fakeclip'
+ Plugin 'kana/vim-textobj-user'
+ Plugin 'nelstrom/vim-textobj-rubyblock'
 
  " grep代替. ag入れてるときだけ有効
- Bundle 'rking/ag.vim'
+ Plugin 'rking/ag.vim'
 
- Bundle 'majutsushi/tagbar'
+ Plugin 'majutsushi/tagbar'
 
- Bundle 'epeli/slimux'
+ Plugin 'epeli/slimux'
  map <C-c><C-c>  :SlimuxREPLSendLine<CR>
  vmap <C-c><C-c> :SlimuxREPLSendSelection<CR>
 
- "Bundle 'jacquesbh/vim-showmarks'
+ "Plugin 'jacquesbh/vim-showmarks'
 
 
  " vim-scripts repos
- Bundle 'mru.vim'
- Bundle 'surround.vim'
- Bundle 'taglist.vim'
+ Plugin 'surround.vim'
+ Plugin 'taglist.vim'
 
- Bundle 'The-NERD-Commenter'
+ Plugin 'The-NERD-Commenter'
 
  " color scheme
- Bundle 'w0ng/vim-hybrid'
+ Plugin 'w0ng/vim-hybrid'
 
- Bundle 'bronson/vim-trailing-whitespace'
+ Plugin 'bronson/vim-trailing-whitespace'
  let g:extra_whitespace_ignored_filetypes = ["unite"]
 
- Bundle 'vim-scripts/AnsiEsc.vim'
+ Plugin 'vim-scripts/AnsiEsc.vim'
 
  Bundle 'vim-ruby/vim-ruby'
  Bundle 'pangloss/vim-javascript'
@@ -158,22 +157,22 @@ endif
  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
  "うまくいかなかった
- "Bundle 'filtering.vim'
- "Bundle 'kana/vim-textobj-line'
- "Bundle 'openbrowser.vim'
+ "Plugin 'filtering.vim'
+ "Plugin 'kana/vim-textobj-line'
+ "Plugin 'openbrowser.vim'
 
  " non github repos
 
  filetype plugin indent on     " required!
  "
  " Brief help
- " :BundleList          - list configured bundles
- " :BundleInstall(!)    - install(update) bundles
- " :BundleSearch(!) foo - search(or refresh cache first) for foo
- " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+ " :PluginList          - list configured bundles
+ " :PluginInstall(!)    - install(update) bundles
+ " :PluginSearch(!) foo - search(or refresh cache first) for foo
+ " :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
  "
  " see :h vundle for more details or wiki for FAQ
- " NOTE: comments after Bundle command are not allowed..
+ " NOTE: comments after Plugin command are not allowed..
 
 "---------------------------------------------------------------------------
 
