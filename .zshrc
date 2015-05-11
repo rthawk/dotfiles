@@ -86,4 +86,5 @@ cdpath=(.. ~)
 # named directories
 hash -d src=~/Dropbox/src/
 
+source ~/.zsh/*.zsh
 
