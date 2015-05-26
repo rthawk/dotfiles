@@ -69,8 +69,6 @@ set complete=.,w,b,u,k,i
 " rails.vim
  Plugin 'tpope/vim-rails.git'
 
- Plugin 'tpope/vim-endwise'
-
  " git補助
  Plugin 'tpope/vim-fugitive'
 
@@ -122,6 +120,7 @@ endif
 
  Plugin 'kana/vim-fakeclip'
  Plugin 'kana/vim-textobj-user'
+ Plugin 'kana/vim-smartinput'
  Plugin 'nelstrom/vim-textobj-rubyblock'
 
  " grep代替. ag入れてるときだけ有効
