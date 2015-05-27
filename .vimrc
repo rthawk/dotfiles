@@ -51,6 +51,8 @@ set complete=.,w,b,u,k,i
  "
  " original repos on github
  Plugin 'mattn/emmet-vim'
+ Plugin 'mattn/vim-textobj-url'
+
  Plugin 'nanotech/jellybeans.vim'
 
  Plugin 'kchmck/vim-coffee-script'
@@ -89,6 +91,7 @@ set complete=.,w,b,u,k,i
  Plugin 'honza/vim-snippets'
  if has('lua')
    Plugin 'Shougo/neosnippet'
+   Plugin 'Shougo/neosnippet-snippets'
  endif
 
  " Enable snipMate compatibility feature.
@@ -122,6 +125,7 @@ endif
  Plugin 'kana/vim-textobj-user'
  Plugin 'kana/vim-smartinput'
  Plugin 'nelstrom/vim-textobj-rubyblock'
+ Plugin 'kana/vim-textobj-line'
 
  " grep代替. ag入れてるときだけ有効
  Plugin 'rking/ag.vim'
@@ -131,9 +135,6 @@ endif
  Plugin 'epeli/slimux'
  map <C-c><C-c>  :SlimuxREPLSendLine<CR>
  vmap <C-c><C-c> :SlimuxREPLSendSelection<CR>
-
- "Plugin 'jacquesbh/vim-showmarks'
-
 
  " vim-scripts repos
  Plugin 'surround.vim'
@@ -163,8 +164,7 @@ endif
 
  "うまくいかなかった
  "Plugin 'filtering.vim'
- "Plugin 'kana/vim-textobj-line'
- "Plugin 'openbrowser.vim'
+ "Plugin 'jacquesbh/vim-showmarks'
 
  " non github repos
 
