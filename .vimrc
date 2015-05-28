@@ -51,7 +51,6 @@ set complete=.,w,b,u,k,i
  "
  " original repos on github
  Plugin 'mattn/emmet-vim'
- Plugin 'mattn/vim-textobj-url'
 
  Plugin 'nanotech/jellybeans.vim'
 
@@ -90,13 +89,18 @@ set complete=.,w,b,u,k,i
 
  Plugin 'honza/vim-snippets'
  if has('lua')
+   Plugin 'Shougo/neocomplete'
    Plugin 'Shougo/neosnippet'
    Plugin 'Shougo/neosnippet-snippets'
  endif
 
- " Enable snipMate compatibility feature.
- let g:neosnippet#enable_snipmate_compatibility = 1
+ " neocomplete
+ let g:neocomplete#enable_at_startup = 0
+ let g:neocomplete#enable_smart_case = 1
+ let g:neocomplete#sources#syntax#min_keyword_length = 3
 
+ " neosnippet
+ let g:neosnippet#enable_snipmate_compatibility = 1
  " Tell Neosnippet about the other snippets
  let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
 
@@ -117,15 +121,17 @@ set complete=.,w,b,u,k,i
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
+"-------
 
  Plugin 'yuku-t/unite-git'
  Plugin 'basyura/unite-rails'
 
  Plugin 'kana/vim-fakeclip'
- Plugin 'kana/vim-textobj-user'
  Plugin 'kana/vim-smartinput'
- Plugin 'nelstrom/vim-textobj-rubyblock'
+ Plugin 'kana/vim-textobj-user'
  Plugin 'kana/vim-textobj-line'
+ Plugin 'nelstrom/vim-textobj-rubyblock'
+ Plugin 'mattn/vim-textobj-url'
 
  " grep代替. ag入れてるときだけ有効
  Plugin 'rking/ag.vim'
@@ -162,26 +168,9 @@ endif
  Plugin 'tpope/vim-markdown'
  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
- "うまくいかなかった
- "Plugin 'filtering.vim'
- "Plugin 'jacquesbh/vim-showmarks'
+ " golang
+ exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 
- " non github repos
+ so ~/Dropbox/config/vimrc_common
 
- filetype plugin indent on     " required!
- "
- " Brief help
- " :PluginList          - list configured bundles
- " :PluginInstall(!)    - install(update) bundles
- " :PluginSearch(!) foo - search(or refresh cache first) for foo
- " :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
- "
- " see :h vundle for more details or wiki for FAQ
- " NOTE: comments after Plugin command are not allowed..
-
-"---------------------------------------------------------------------------
-
-" golang
-exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
-
-so ~/Dropbox/config/vimrc_common
+filetype plugin indent on     " required!
