@@ -19,13 +19,8 @@ source $VIMRUNTIME/macros/matchit.vim
 "---------------------------------------------------------------------------
 set encoding=utf-8
 " set fileencoding=utf-8
-
 " set fileencodings=utf-8,cp932,euc-jp
-" MacVimだとfileencodingsは不要
-" set fileencodings=ucs-bom,iso-2022-jp,sjis,cp932,euc-jp,euc-jisx0213,eucjp-ms
 
-"---------------------------------------------------------------------------
-" 
 "---------------------------------------------------------------------------
 
 " 外部のエディタで編集中のファイルが変更された場合、自動で読み込む
@@ -133,7 +128,6 @@ endif
  Plugin 'nelstrom/vim-textobj-rubyblock'
  Plugin 'mattn/vim-textobj-url'
 
- " grep代替. ag入れてるときだけ有効
  Plugin 'rking/ag.vim'
 
  Plugin 'majutsushi/tagbar'
