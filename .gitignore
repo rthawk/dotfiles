@@ -1,3 +1,9 @@
+.vim/*-private.vim
+.vim/bundle
+.vim/.netrwhist
+.vim/.netrwbook
+.vim/rc/*-private.vim
+
 .vimperator/info/default/
 .vimperator/info/default/macros
 .vimperator/info/default/quickmarks
