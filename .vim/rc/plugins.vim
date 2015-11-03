@@ -8,12 +8,12 @@ source $VIMRUNTIME/macros/matchit.vim
  set nocompatible               " be iMproved
  filetype off                   " required!
 
- set rtp+=~/.vim/bundle/vundle/
- call vundle#rc()
+ set rtp+=~/.vim/bundle/Vundle.vim
+ call vundle#begin()
 
  " let Vundle manage Vundle
  " required!
- Plugin 'gmarik/vundle'
+ Plugin 'VundleVim/Vundle.vim'
 
  " My Bundles here:
  "
@@ -143,4 +143,5 @@ endif
  exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
  exe "set rtp+=".globpath($GOPATH, "src/github.com/golang/lint/misc/vim")
 
+call vundle#end()             " required
 filetype plugin indent on     " required!
