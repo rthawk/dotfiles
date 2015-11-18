@@ -1,14 +1,13 @@
 syntax on
 set nocompatible
-
+set ttyfast
+set notitle
 set number
-set cursorline
+
+set nocursorline
 set nocursorcolumn
 
 set showmatch
-
-set ttyfast
-set notitle
 
 set ignorecase
 set smartcase
