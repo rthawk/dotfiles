@@ -59,7 +59,11 @@ alias grep='grep --color=auto'
 # alias
 #+---------------------------------------------------------+
 
+alias l='ls -1'
+alias lsa='ls -a'
+alias la='ls -1a'
 alias ll='ls -hl'
+alias lla='ls -alh'
 alias p="popd"
 
 alias g='git'
