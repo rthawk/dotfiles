@@ -2,6 +2,8 @@
 " extended % matching for HTML, LaTeX, and many other languages
 source $VIMRUNTIME/macros/matchit.vim
 
+set rtp+=~/.vim/experiment
+
 """""""""""""""
 " Vundle.vim
 
