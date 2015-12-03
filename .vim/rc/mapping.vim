@@ -49,6 +49,8 @@ nnoremap ,zr :tabnew ~/.vim/rc/<CR>
 " tags jump
 nnoremap <C-]> g<C-]>
 
+nnoremap <Space>e :Explore.<CR>
+
 
 " 入力補助
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
