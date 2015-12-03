@@ -64,8 +64,6 @@ set wildignore+=*DS_Store*
 set list
 set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 
-set background=dark
-
 " ctags
 if has('path_extra')
     "set tags+=tags
