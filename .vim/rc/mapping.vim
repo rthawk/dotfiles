@@ -1,8 +1,6 @@
 filetype off
 filetype plugin indent off
 
-set nocompatible
-
 " remap 'jump to mark'
 nnoremap ,, '
 

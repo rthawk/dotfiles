@@ -1,5 +1,4 @@
 syntax on
-set nocompatible
 set ttyfast
 set notitle
 set number

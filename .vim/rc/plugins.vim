@@ -6,8 +6,6 @@ set rtp+=~/.vim/experiment
 
 """""""""""""""
 " Vundle.vim
-
- set nocompatible               " be iMproved
  filetype off                   " required!
 
  set rtp+=~/.vim/bundle/Vundle.vim
