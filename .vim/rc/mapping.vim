@@ -33,11 +33,12 @@ nnoremap ,L :tabs<CR>
 nnoremap ,t :tabnew<CR>
 nnoremap ,T :tabnew
 
-" Emacs save
+" save
+nnoremap <C-S> :w<CR>
 nnoremap <C-X><C-S> :w<CR>
 nnoremap <C-X><C-W> :w
 
-" Emacs select
+" select all
 nnoremap <C-X><C-H> ggVG
 
 nnoremap <C-X><C-N> :nohlsearch<CR>
@@ -73,18 +74,21 @@ nnoremap <C-X><C-L> :TlistToggle<CR>
 let g:unite_enable_start_insert=1
 
 " バッファ一覧
-nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
 nnoremap <silent> ,b :<C-u>Unite buffer<CR>
 nnoremap <silent> ,l :<C-u>Unite buffer<CR>
 " タブ一覧
 nnoremap <silent> ,ut :<C-u>Unite tab<CR>
 " ファイル一覧
-nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> <Space>f :Unite -buffer-name=pwd_files file<CR>
+nnoremap <silent> <Space>F :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> <Space>r :Unite -buffer-name=pwd_files_recursively file_rec/async<CR>
+nnoremap <silent> <Space>R :UniteWithBufferDir -buffer-name=pwd_files_recursively file_rec/async<CR>
+
 " レジスタ一覧
 nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
 " 最近使用したファイル一覧
 nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
-nnoremap <silent> <Space>e :<C-u>Unite file_mru<CR>
+nnoremap <silent> <Space>E :<C-u>Unite file_mru<CR>
 " 常用セット
 nnoremap <silent> ,u<Space> :<C-u>Unite buffer file_mru<CR>
 " 全部乗せ

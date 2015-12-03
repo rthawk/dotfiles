@@ -68,6 +68,7 @@ set background=dark
 
 " ctags
 if has('path_extra')
+    "set tags+=tags
     set tags+=tags;
 endif
 
@@ -117,14 +118,6 @@ let g:netrw_alto = 1
 
 set clipboard=unnamed
 set complete=.,w,b,u,k,i
-
-"---------------------------------------------------------------------------
-" Encoding
-"---------------------------------------------------------------------------
 set encoding=utf-8
-" set fileencoding=utf-8
-" set fileencodings=utf-8,cp932,euc-jp
-
-"---------------------------------------------------------------------------
 
 runtime! rc/*.vim " ~/.vim/rc/*.vim 分割した各種.vimの読み込み
