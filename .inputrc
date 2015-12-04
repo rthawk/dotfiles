@@ -9,3 +9,6 @@ $if mysql
     "\C-xc": "show create table TN\\G"
 $endif
 
+$if Bash
+set completion-ignore-case on
+$endif
