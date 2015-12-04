@@ -77,6 +77,8 @@ alias be="bundle exec"
 
 type emacs >& /dev/null && alias e=emacs
 
+[ "$(uname)" = 'Darwin' ] && alias pwdcp='pwd | pbcopy'
+
 # experimental settings
 if [ -f ~/.privaterc.sh ] ; then
     . ~/.privaterc.sh
