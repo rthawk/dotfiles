@@ -1,4 +1,3 @@
-
 " extended % matching for HTML, LaTeX, and many other languages
 source $VIMRUNTIME/macros/matchit.vim
 
@@ -15,13 +14,7 @@ set rtp+=~/.vim/experiment
  " required!
  Plugin 'VundleVim/Vundle.vim'
 
- " My Bundles here:
- "
- " original repos on github
  Plugin 'mattn/emmet-vim'
-
- Plugin 'nanotech/jellybeans.vim'
-
  Plugin 'kchmck/vim-coffee-script'
 
  " Syntax checking
