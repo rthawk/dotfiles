@@ -130,7 +130,6 @@ endif
  Plugin 'tpope/vim-markdown'
  autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
- Plugin 'mhinz/vim-startify'
 
  " golang
  exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
