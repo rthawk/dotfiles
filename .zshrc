@@ -7,7 +7,7 @@ fi
 bindkey -e
 
 # 重複したパスを登録しない
-typeset -U path PATH
+typeset -U fpath PATH
 
 # 補完style
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
@@ -29,7 +29,9 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 
 # 前履歴の一覧表示
-function history-all { history -E 1 }
+function history-all {
+  history -E 1
+}
 
 # history search
 bindkey '^P' history-beginning-search-backward

@@ -11,12 +11,11 @@ shopt -s globstar
 export HISTCONTROL=ignoreboth
 
 # bash-completion
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
+if (which brew > /dev/null) && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+    . "$(brew --prefix)/etc/bash_completion"
 fi
 
 # rbenv
-# if which -s rbenv ; then
 if which rbenv > /dev/null ; then
     export PATH="$HOME/.rbenv/shims:$PATH"
     eval "$(rbenv init -)"
