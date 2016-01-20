@@ -8,6 +8,7 @@ nnoremap ,, '
 nnoremap ,nn <ESC>i<C-R>=strftime("%H:%M ")<CR>
 " 今日の日付と時間を挿入してinsertモードへ移行 ----
 nnoremap ,nd <ESC>i<C-R>=strftime("* %Y-%m-%d (%a) %H:%M ")<CR>
+nnoremap ,nt <ESC>i<C-R>=strftime("%Y-%m-%d ")<CR>
 
 " 検索ハイライト解除
 nnoremap ,h :nohlsearch<CR>
