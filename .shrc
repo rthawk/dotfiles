@@ -29,9 +29,6 @@ export PATH="$PATH:/usr/local/sbin"
 
 [[ -s /usr/local/bin/ghc-pkg ]] && export PATH=~/.cabal/bin:$PATH
 
-# tmuxinator
-[[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source "$HOME/.tmuxinator/scripts/tmuxinator"
-
 # nodebrew
 if [[ -f $HOME/.nodebrew/nodebrew ]]; then
     export PATH=$HOME/.nodebrew/current/bin:$PATH

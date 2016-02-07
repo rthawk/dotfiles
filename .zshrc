@@ -64,7 +64,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # if which -s rbenv ; then
 if which rbenv > /dev/null ; then
     export PATH="$HOME/.rbenv/shims:$PATH"
-    eval "$(rbenv init - zsh)"
+    eval "$(rbenv init - --no-rehash )"
 fi
 
 # completion init
