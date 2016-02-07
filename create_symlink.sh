@@ -11,7 +11,7 @@ for dotfile in .?*; do
         .gitignore)
             continue;;
         *)
-            ln -Fis "$PWD/$dotfile" $HOME
+            ln -snfv "$PWD/$dotfile" "$HOME"
             ;;
     esac
 done
