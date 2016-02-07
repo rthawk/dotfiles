@@ -24,8 +24,8 @@
 	name = rthawk
 	email = rthawk@rtks.net
 [core]
-    pager = less -r
-	excludesfile = /Users/rthawk/.gitignore_global
+	pager = less -r
+	excludesfile = ~/.gitignore_global
 	editor = /usr/bin/vim
 [pager]
     grep = false
