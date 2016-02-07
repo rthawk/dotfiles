@@ -50,6 +50,8 @@ nnoremap <C-]> g<C-]>
 
 nnoremap <Space>e :Explore.<CR>
 
+nnoremap <Space>r :%s/
+vnoremap <Space>r :s/
 
 " 入力補助
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -82,8 +84,8 @@ nnoremap <silent> ,ut :<C-u>Unite tab<CR>
 " ファイル一覧
 nnoremap <silent> <Space>f :Unite -buffer-name=pwd_files file<CR>
 nnoremap <silent> <Space>F :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
-nnoremap <silent> <Space>r :Unite -buffer-name=pwd_files_recursively file_rec/async<CR>
-nnoremap <silent> <Space>R :UniteWithBufferDir -buffer-name=pwd_files_recursively file_rec/async<CR>
+nnoremap <silent> <Space>,f :Unite -buffer-name=pwd_files_recursively file_rec/async<CR>
+nnoremap <silent> <Space>,F :UniteWithBufferDir -buffer-name=pwd_files_recursively file_rec/async<CR>
 
 " レジスタ一覧
 nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
@@ -103,6 +105,20 @@ nnoremap <silent> <Space>o :<C-u>Unite git_cached git_untracked<CR>
 
 " command
 nnoremap <silent> <Space>a :<C-u>Unite command mapping<CR>
+
+" grep
+nnoremap <silent> <Space>g :Unite -buffer-name=gitgrep grep/git:./:-I<CR>
+nnoremap <silent> <Space>/ :Unite -buffer-name=grep grep:./:-iR<CR>
+
+let g:unite_source_grep_max_candidates = 200
+	if executable('ag')
+	  " Use ag(the silver searcher)
+	  let g:unite_source_grep_command = 'ag'
+	  let g:unite_source_grep_default_opts =
+	  \ '-i --vimgrep --hidden --ignore ' .
+	  \ '''.hg'' --ignore ''.svn'' --ignore ''.git'' --ignore ''.bzr'''
+	  let g:unite_source_grep_recursive_opt = ''
+endif
 
 " ウィンドウを分割して開く
 au FileType unite nnoremap <silent> <buffer> <expr> <C-j> unite#do_action('split')
