@@ -1,6 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
-DIRNAME='./.vim/bundle'
+DIRNAME=~/.vim/bundle
+
+if ! type vim > /dev/null >2&1 ; then
+  echo 'vim is not installed'
+  exit 1
+fi
 
 if ! [ -d "$DIRNAME" ] ; then
   echo "create directory: $DIRNAME"
