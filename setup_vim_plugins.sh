@@ -13,7 +13,8 @@ if ! [ -d "$DIRNAME" ] ; then
 fi
 
 if ! [ -d "$DIRNAME/Vundle.vim" ] ; then
+  echo 'installing vim plugin manager'
   git clone https://github.com/VundleVim/Vundle.vim "$DIRNAME/Vundle.vim"
 fi
 
-vim +PluginInstall +qall
+echo 'done.'
