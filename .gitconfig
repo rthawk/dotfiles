@@ -22,7 +22,7 @@
 
 [user]
 	name = rthawk
-	email = rthawk@rtks.net
+	email = hawk@rtks.net
 [core]
 	pager = less -r
 	excludesfile = ~/.gitignore_global
