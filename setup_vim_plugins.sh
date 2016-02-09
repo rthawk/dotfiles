@@ -2,7 +2,7 @@
 
 DIRNAME=~/.vim/bundle
 
-if ! type vim > /dev/null >2&1 ; then
+if ! type vim > /dev/null 2>&1 ; then
   echo 'vim is not installed'
   exit 1
 fi
