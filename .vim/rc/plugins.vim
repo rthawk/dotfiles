@@ -17,7 +17,6 @@ set rtp+=~/.vim/experiment
  Plugin 'mattn/emmet-vim'
  Plugin 'kchmck/vim-coffee-script'
 
- " Syntax checking
  Plugin 'Syntastic'
  let g:syntastic_enable_signs=1
  let g:syntastic_auto_loc_list=2
@@ -25,19 +24,13 @@ set rtp+=~/.vim/experiment
  set statusline+=%{SyntasticStatuslineFlag()}
  set statusline+=%*
 
- " ref.vim
  Plugin 'thinca/vim-ref'
-
-" rails.vim
- Plugin 'tpope/vim-rails.git'
-
- " git補助
+ Plugin 'tpope/vim-rails'
  Plugin 'tpope/vim-fugitive'
 
  Plugin 'AndrewRadev/switch.vim'
  nnoremap - :Switch<cr>
 
- " gitの差分を表示する
  Plugin 'airblade/vim-gitgutter'
  nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
  nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
@@ -102,11 +95,8 @@ endif
  map <C-c><C-c>  :SlimuxREPLSendLine<CR>
  vmap <C-c><C-c> :SlimuxREPLSendSelection<CR>
 
- " vim-scripts repos
- Plugin 'surround.vim'
- Plugin 'taglist.vim'
-
- Plugin 'The-NERD-Commenter'
+ Plugin 'tpope/vim-surround'
+ Plugin 'scrooloose/nerdcommenter'
 
  " color scheme
  Plugin 'w0ng/vim-hybrid'

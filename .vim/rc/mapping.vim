@@ -64,11 +64,8 @@ cabbrev E Explore
 cabbrev S Sexplore
 cabbrev V Vexplore
 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" taglist.vim
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <C-X><C-L> :TlistToggle<CR>
+nnoremap <C-X><C-L> :TagbarToggle<CR>
+nnoremap <F8> :TagbarToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " unite.vim
