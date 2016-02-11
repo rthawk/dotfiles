@@ -1,10 +1,10 @@
 #!/bin/bash
 # common file for bash, zsh,etc.. all other shell
 
-# C-s で画面が停止するのをやめる. 代わりに履歴検索が使える
-stty stop undef
+stty stop undef  # C-S for history search
+stty start undef # C-Q
 
-# lsを色付け
+# ls color
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
 
@@ -15,7 +15,7 @@ export HISTSIZE=10000
 export SAVEHIST=20000
 export HISTFILESIZE=20000
 
-# historyに時刻追加
+# history with timestamp
 HISTTIMEFORMAT='%Y%m%d %T ';
 export HISTTIMEFORMAT
 
@@ -68,7 +68,6 @@ alias p="popd"
 alias g='git'
 alias gn='git --no-pager'
 
-# man を日本語でも選べるようにする
 alias man='env LANG=C man'
 alias jman='env LANG=ja_JP.UTF-8 man'
 
