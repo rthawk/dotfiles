@@ -4,10 +4,6 @@
 stty stop undef  # C-S for history search
 stty start undef # C-Q
 
-# ls color
-export CLICOLOR=1
-export LSCOLORS=DxGxcxdxCxegedabagacad
-
 # history on memory
 export HISTSIZE=10000
 
@@ -58,11 +54,25 @@ alias grep='grep --color=auto'
 # alias
 #+---------------------------------------------------------+
 
+export CLICOLOR=1
+
+case "$(uname)" in
+  Linux)
+    export LS_COLORS='di=33:fi=0:ln=95:pi=5:so=5:bd=5:cd=5:or=37:mi=0:ex=31:*.rpm=90'
+    alias ls="ls --color=auto"
+    ;;
+  Darwin) # for OSX
+    export LSCOLORS=dxgxcxdxCxegedabagacad
+    alias ls='ls -G'
+    ;;
+esac
+
 alias l='ls -1'
 alias lsa='ls -a'
 alias la='ls -1a'
 alias ll='ls -hl'
 alias lla='ls -alh'
+
 alias p="popd"
 
 alias g='git'
