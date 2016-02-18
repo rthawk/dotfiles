@@ -1,4 +1,4 @@
-# 共通ファイルの読み込み
+
 if [ -f ~/.shrc ] ; then
     . ~/.shrc
 fi
@@ -37,11 +37,15 @@ function history-all {
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
 
-
-# プロンプトの設定
-#PS1="[${USER}@${HOST%%.*} %1~]%(!.#.$) "
-PS1="[${USER}@%m %1~%(1j, job:%j,)]%(!.#.$) "
-
+# prompt
+case "$(uname)" in
+  Linux)
+    export PS1="%n@%M > %1~%(1j, job:%j,) %(!.#.$) "
+    ;;
+  Darwin) # for OSX
+    export PS1="> %1~%(1j, job:%j,) %(!.#.$) "
+    ;;
+esac
 
 #文字コードの設定
 export LANG=ja_JP.UTF-8
