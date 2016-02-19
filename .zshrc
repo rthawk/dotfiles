@@ -101,9 +101,6 @@ zstyle ':zle:*' word-style unspecified
 setopt AUTO_CD
 cdpath=(.. ~)
 
-# named directories
-hash -d src=~/Dropbox/src/
-
 for file in ~/.zsh/*.zsh; do
     . "$file"
 done
