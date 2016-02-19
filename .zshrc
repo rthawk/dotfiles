@@ -1,3 +1,5 @@
+# shellcheck disable=SC1071
+#!/usr/bin/env zsh
 
 if [ -f ~/.shrc ] ; then
     . ~/.shrc
