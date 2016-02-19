@@ -39,7 +39,7 @@ function history-all {
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
 
-# prompt
+# left prompt
 case "$(uname)" in
   Linux)
     export PS1="%n@%M > %1~%(1j, job:%j,) %(!.#.$) "
@@ -49,8 +49,20 @@ case "$(uname)" in
     ;;
 esac
 
-#文字コードの設定
-export LANG=ja_JP.UTF-8
+# right prompt
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
+zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+
+precmd () {
+  vcs_info
+}
+# shellcheck disable=SC2016
+RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
 # lessを色付け表示させる 要source-highlight
 EXISTS_SOURCE_HIGHLIGHT='/usr/local/Cellar/source-highlight'
@@ -62,6 +74,7 @@ else
     print "$EXISTS_SOURCE_HIGHLIGHT directory is not found."
     print "please install source-highlight , type 'brew list | grep source-highlight' "
 fi
+export LANG=ja_JP.UTF-8
 
 # zsh completion
 fpath=(/usr/local/share/zsh-completions $fpath)
@@ -85,7 +98,6 @@ autoload -U select-word-style
 select-word-style default
 zstyle ':zle:*' word-chars " /=;@:{},|"
 zstyle ':zle:*' word-style unspecified
-
 
 # auto cd
 setopt AUTO_CD
