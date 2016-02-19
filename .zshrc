@@ -8,20 +8,18 @@ fi
 # keymode
 bindkey -e
 
-# 重複したパスを登録しない
+# unique path
 typeset -U fpath PATH
 
-# 補完style
+# completion style
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 
 # pushd popd
 setopt autopushd
 
-# 履歴ファイルの保存先
+# history file path
 export HISTFILE=${HOME}/.zsh_history
-
-# 履歴の共有
 setopt share_history
 
 # ヒストリに追加されるコマンド行が古いものと同じなら古いものを削除
