@@ -22,3 +22,19 @@ if which rbenv > /dev/null ; then
 fi
 
 alias cd='pushd > /dev/null'
+
+# prompt
+BLUE="\[\033[0;34m\]"
+WHITE="\[\033[0;37m\]"
+
+case "$(uname)" in
+  Linux)
+    if [ -z "$SSH_CLIENT" ]; then
+      PROMPT_SSH_CONN="ssh:"
+    fi
+    export PS1=$BLUE$PROMPT_SSH_CONN"b>$WHITE \W $ "
+    ;;
+  Darwin) # for OSX
+    export PS1=$BLUE"b>$WHITE \W $ "
+    ;;
+esac
