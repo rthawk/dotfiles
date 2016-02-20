@@ -3,6 +3,7 @@
     co = checkout
     st = status
     s  = status -s
+    sm  = submodule status
     cv = commit -v
     ci = commit -a
     civ = commit -av
