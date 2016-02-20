@@ -62,16 +62,6 @@ precmd () {
 # shellcheck disable=SC2016
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
-# lessを色付け表示させる 要source-highlight
-EXISTS_SOURCE_HIGHLIGHT='/usr/local/Cellar/source-highlight'
-if [ -e $EXISTS_SOURCE_HIGHLIGHT ]; then
-    # print "$EXISTS_SOURCE_HIGHLIGHT directory found."
-    export LESS='-R'
-    export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
-else
-    print "$EXISTS_SOURCE_HIGHLIGHT directory is not found."
-    print "please install source-highlight , type 'brew list | grep source-highlight' "
-fi
 export LANG=ja_JP.UTF-8
 
 # zsh completion
