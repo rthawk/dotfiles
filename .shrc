@@ -18,9 +18,15 @@ export HISTTIMEFORMAT
 export EDITOR=/usr/bin/vim
 export BUNDLER_EDITOR=vim
 
+# rbenv
+# if which -s rbenv ; then
+if which rbenv > /dev/null ; then
+    export PATH="$PATH:$HOME/.rbenv/shims"
+    eval "$(rbenv init - --no-rehash )"
+fi
+
 # homebrew
 export PATH=/usr/local/bin:$PATH
-
 export PATH="$PATH:/usr/local/sbin"
 
 # nodebrew

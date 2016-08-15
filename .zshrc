@@ -67,13 +67,6 @@ export LANG=ja_JP.UTF-8
 # zsh completion
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# rbenv
-# if which -s rbenv ; then
-if which rbenv > /dev/null ; then
-    export PATH="$HOME/.rbenv/shims:$PATH"
-    eval "$(rbenv init - --no-rehash )"
-fi
-
 # completion init
 autoload -U compinit && compinit
 
