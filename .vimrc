@@ -26,7 +26,8 @@ set modelines=5
 set hlsearch
 set mouse=a
 set guioptions-=T
-set vb t_vb= " ビープ音を鳴らさない
+set vb t_vb= " no beep sound
+set background=dark
 
 " スペースをタブとして使用する ts= 1個のタブに使用するスペースの数
 set expandtab
