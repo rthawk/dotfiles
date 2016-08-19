@@ -1,10 +1,8 @@
 #!/bin/sh
 
-DOTFILE_PATH=~/dotfiles/
+DOTFILE_PATH="$(dirname "$0")"
 
-git clone https://github.com/rthawk/dotfiles "$DOTFILE_PATH"
+cd "$DOTFILE_PATH" || exit 1
 
-cd $DOTFILE_PATH
 ./create_symlink.sh
 ./setup_vim_plugins.sh
-
