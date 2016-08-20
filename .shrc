@@ -60,18 +60,6 @@ _enable_src_highlight
 # cd support
 . ~/.zsh/plugins/z/z.sh
 
-#+---------------------------------------------------------+
-# grep
-#+---------------------------------------------------------+
-
-export GREP_OPTIONS="--binary-files=without-match"
-export GREP_OPTIONS="--exclude=tags $GREP_OPTIONS"
-
-for pattern in .cvs .git .hg .svn .idea; do
-    export GREP_OPTIONS="--exclude-dir=$pattern $GREP_OPTIONS"
-done
-
-alias grep='grep --color=auto'
 
 #+---------------------------------------------------------+
 # alias
@@ -106,6 +94,8 @@ alias gn='git --no-pager'
 
 alias be="bundle exec"
 
+alias grepr='grep -Ir --color=auto --exclude=tags --exclude-dir={.git,.hg,.svn,.idea,.cvs}'
+alias grep='grep --color=auto'
 # experimental settings
 if [ -f ~/.privaterc.sh ] ; then
     . ~/.privaterc.sh
