@@ -1,20 +1,11 @@
 #!/bin/bash
 
-DIRNAME=~/.vim/bundle
-
-if ! type vim > /dev/null 2>&1 ; then
-  echo 'vim is not installed'
-  exit 1
-fi
+DIRNAME=~/vim_plugins
 
 if ! [ -d "$DIRNAME" ] ; then
-  echo "create directory: $DIRNAME"
-  mkdir -p $DIRNAME
-fi
-
-if ! [ -d "$DIRNAME/Vundle.vim" ] ; then
-  echo 'installing vim plugin manager'
+  mkdir -pv $DIRNAME
   git clone https://github.com/VundleVim/Vundle.vim "$DIRNAME/Vundle.vim"
+  ln -sv $DIRNAME ~/.vim/bundle
+  printf '\n\n if needed, you can execute "vim +PluginInstall +qall" manually.'
 fi
 
-echo 'done.'
