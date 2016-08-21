@@ -62,8 +62,6 @@ precmd () {
 # shellcheck disable=SC2016
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
-export LANG=ja_JP.UTF-8
-
 # zsh completion
 fpath=(/usr/local/share/zsh-completions $fpath)
 
