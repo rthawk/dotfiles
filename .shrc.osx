@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# for slimux on tmux 2.2
+export EVENT_NOKQUEUE=1
+export EVENT_NOPOLL=1
+
+export LSCOLORS=dxgxcxdxCxegedabagacad
+alias ls='ls -G'
+alias man='env LANG=C man'
+alias pwdcp='pwd | pbcopy'
+
+# vim:set filetype=sh:
