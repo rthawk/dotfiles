@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# homebrew
+export PATH=/usr/local/bin:$PATH
+export PATH="$PATH:/usr/local/sbin"
+
 # for slimux on tmux 2.2
 export EVENT_NOKQUEUE=1
 export EVENT_NOPOLL=1
