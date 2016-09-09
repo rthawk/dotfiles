@@ -72,7 +72,7 @@ endif
 
 
 if has('unix')
-
+  set clipboard^=unnamedplus
 endif
 
 if has('win32') || has('win64')
@@ -80,14 +80,10 @@ if has('win32') || has('win64')
 endif
 
 if has('Mac')
-    " Mac Clipboard
-    vmap <silent> sy :!pbcopy; pbpaste<CR>
-    map <silent> sp <esc>o<esc>v:!pbpaste<CR>
-endif
-
-if has('kaoriya')
-    "入力モードに入った時に、必ず日本語入力をオフにする
-    "IminsertOff
+  set clipboard=unnamed
+  " Mac Clipboard
+  vmap <silent> sy :!pbcopy; pbpaste<CR>
+  map <silent> sp <esc>o<esc>v:!pbpaste<CR>
 endif
 
 " ステータスラインに開いているバッファ数を記載
@@ -114,7 +110,6 @@ let g:netrw_altv = 1
 " 'o'でファイルを開くときは下側に開く(default upper)
 let g:netrw_alto = 1
 
-set clipboard=unnamed
 set complete=.,w,b,u,k,i
 set encoding=utf-8
 
