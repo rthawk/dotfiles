@@ -64,17 +64,13 @@ set rtp+=~/.vim/experiment
  xmap <C-k> <Plug>(neosnippet_expand_target)
 
  " SuperTab like snippets behavior.
- imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
- \ "\<Plug>(neosnippet_expand_or_jump)"
- \: pumvisible() ? "\<C-n>" : "\<TAB>"
+ " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+ imap <C-k> <Plug>(neosnippet_expand_or_jump)
+ "imap <expr><TAB>
  smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
- \ "\<Plug>(neosnippet_expand_or_jump)"
- \: "\<TAB>"
+       \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
-" For snippet_complete marker.
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
+
 "-------
 
  Plugin 'yuku-t/unite-git'
@@ -105,6 +101,7 @@ endif
  let g:extra_whitespace_ignored_filetypes = ["unite"]
 
  Plugin 'vim-scripts/AnsiEsc.vim'
+ Plugin 'vim-scripts/JavaDecompiler.vim'
 
  Plugin 'vim-ruby/vim-ruby'
  let g:rubycomplete_buffer_loading = 1

@@ -1,34 +1,24 @@
 filetype off
 filetype plugin indent off
 
-" remap 'jump to mark'
 nnoremap ,, '
+nnoremap ,c :
+nnoremap ,s :w<CR>
+inoremap <C-J> <ESC>:
 
-" 時間のみ挿入
+" 時間挿入
 nnoremap ,nn <ESC>i<C-R>=strftime("%H:%M ")<CR>
 " 今日の日付と時間を挿入してinsertモードへ移行 ----
 nnoremap ,nd <ESC>i<C-R>=strftime("* %Y-%m-%d (%a) %H:%M ")<CR>
 nnoremap ,nt <ESC>i<C-R>=strftime("%Y-%m-%d ")<CR>
 
-" 検索ハイライト解除
 nnoremap ,h :nohlsearch<CR>
-
-" 選択しているバッファーを強制的に削除
 nnoremap <Leader>bd :bd!<CR>
 
-" マーク一覧を表示
 nnoremap ,m :marks<CR>
-
-" バッファ一覧を表示
 " nnoremap ,l :buffers<CR>
-
-" レジスタ一覧を表示
 nnoremap ,r :reg<CR>
-
-" タブ一覧を表示
 nnoremap ,L :tabs<CR>
-
-" 新規タブを開く
 nnoremap ,t :tabnew<CR>
 nnoremap ,T :tabnew
 
@@ -58,6 +48,8 @@ vnoremap <Space>r :s/
 
 ab #l ------------------------------------------
 " iabbrev #lg logger
+ia ,e <ESC>
+ia ,m <CR>
 
 " only command line mode
 cabbrev E Explore
@@ -66,6 +58,7 @@ cabbrev V Vexplore
 
 nnoremap <C-X><C-L> :TagbarToggle<CR>
 nnoremap <F8> :TagbarToggle<CR>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " unite.vim
