@@ -10,25 +10,26 @@ shopt -s globstar
 # 重複履歴を無視 && 空白から始めたコマンドを無視
 export HISTCONTROL=ignoreboth
 
-# bash-completion
-if (which brew > /dev/null) && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
-    . "$(brew --prefix)/etc/bash_completion"
-fi
-
 alias cd='pushd > /dev/null'
-
-# prompt
-BLUE="\[\033[0;34m\]"
-WHITE="\[\033[0;37m\]"
 
 case "$(uname)" in
   Linux)
-    if [ -z "$SSH_CLIENT" ]; then
-      PROMPT_SSH_CONN="ssh:"
+    BASECL="\[$(tput setaf 38)\]"
+    RESET="\[$(tput sgr0)\]"
+
+    if [ -n "$SSH_CLIENT" ]; then
+      text="ssh "
     fi
-    export PS1=$BLUE$PROMPT_SSH_CONN"b>$WHITE \W $ "
+      export PS1=$BASECL"$text\s:\j \W >$RESET "
     ;;
   Darwin) # for OSX
-    export PS1=$BLUE"b>$WHITE \W $ "
+    # bash-completion
+    if (which brew > /dev/null) && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+        . "$(brew --prefix)/etc/bash_completion"
+    fi
+
+    BLUE="\[\033[0;34m\]"
+    WHITE="\[\033[0;37m\]"
+    export PS1=$BLUE"b>$WHITE \W \$ "
     ;;
 esac
