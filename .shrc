@@ -20,7 +20,7 @@ export BUNDLER_EDITOR=vim
 
 # rbenv
 # if which -s rbenv ; then
-if which rbenv > /dev/null ; then
+if [ -d ~/.rbenv ]  > /dev/null ; then
     export PATH="$PATH:$HOME/.rbenv/shims"
     eval "$(rbenv init - --no-rehash )"
 fi
