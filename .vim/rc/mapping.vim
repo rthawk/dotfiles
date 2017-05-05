@@ -4,13 +4,12 @@ filetype plugin indent off
 nnoremap ,, '
 nnoremap ,c :
 nnoremap ,s :w<CR>
+nnoremap ,w <C-W>
 inoremap <C-J> <ESC>:
 
-" 時間挿入
-nnoremap ,nn <ESC>i<C-R>=strftime("%H:%M ")<CR>
-" 今日の日付と時間を挿入してinsertモードへ移行 ----
-nnoremap ,nd <ESC>i<C-R>=strftime("* %Y-%m-%d (%a) %H:%M ")<CR>
-nnoremap ,nt <ESC>i<C-R>=strftime("%Y-%m-%d ")<CR>
+nnoremap ,nn <ESC>i<C-R>=strftime("%H:%M")<CR>
+nnoremap ,nd <ESC>i<C-R>=strftime("* %Y-%m-%d (%a) %H:%M")<CR>
+nnoremap ,nt <ESC>i<C-R>=strftime("%Y-%m-%d")<CR>
 
 nnoremap ,h :nohlsearch<CR>
 nnoremap <Leader>bd :bd!<CR>
@@ -55,6 +54,8 @@ ia ,m <CR>
 cabbrev E Explore
 cabbrev S Sexplore
 cabbrev V Vexplore
+cabbrev ,e <ESC>
+cabbrev ,m <CR>
 
 nnoremap <C-X><C-L> :TagbarToggle<CR>
 nnoremap <F8> :TagbarToggle<CR>
