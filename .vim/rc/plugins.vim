@@ -27,6 +27,7 @@ set rtp+=~/.vim/experiment
  Plugin 'thinca/vim-ref'
  Plugin 'tpope/vim-rails'
  Plugin 'tpope/vim-fugitive'
+ Plugin 'ctrlpvim/ctrlp.vim'
 
  Plugin 'AndrewRadev/switch.vim'
  nnoremap - :Switch<cr>
@@ -36,10 +37,7 @@ set rtp+=~/.vim/experiment
  nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
 
  Plugin 'thinca/vim-quickrun'
- Plugin 'Shougo/unite.vim'
  Plugin 'Shougo/vimproc'
- Plugin 'Shougo/neomru.vim'
- Plugin 'Shougo/unite-outline'
 
  Plugin 'honza/vim-snippets'
  if has('lua')
@@ -73,9 +71,6 @@ set rtp+=~/.vim/experiment
 
 "-------
 
- Plugin 'yuku-t/unite-git'
- Plugin 'basyura/unite-rails'
-
  Plugin 'kana/vim-fakeclip'
  Plugin 'kana/vim-smartinput'
  Plugin 'kana/vim-textobj-user'
@@ -98,7 +93,6 @@ set rtp+=~/.vim/experiment
  Plugin 'w0ng/vim-hybrid'
 
  Plugin 'bronson/vim-trailing-whitespace'
- let g:extra_whitespace_ignored_filetypes = ["unite"]
 
  Plugin 'vim-scripts/AnsiEsc.vim'
  Plugin 'vim-scripts/JavaDecompiler.vim'
