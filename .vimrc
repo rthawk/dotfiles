@@ -29,7 +29,6 @@ set guioptions-=T
 set vb t_vb= " no beep sound
 set background=dark
 
-" スペースをタブとして使用する ts= 1個のタブに使用するスペースの数
 set expandtab
 set tabstop=2
 set softtabstop=2
@@ -37,30 +36,24 @@ set shiftwidth=2
 
 " set foldmethod=syntax
 
-" 改行コードの自動認識
 set fileformats=unix,dos,mac
 
 set cmdheight=1
-" ステータスラインの表示設定
 set statusline=[%{CountBuffers()}\ buffers]\ %F%m%r%h%w\ [%{&fileencoding}]\ %{&fileformat}\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 
-
-" add git status on statusLine
+" git status
 set statusline+=%{fugitive#statusline()}
 
-" g?でrot13ではなく、migemoで?する
+" g? migemo
 if has('migemo')
 	set migemo
 endif
 
-" コマンドラインに補完候補表示
 set wildmenu
 set wildmode=list:full
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*DS_Store*
 
-"特殊文字(SpecialKey)の見える化。listcharsはlcsでも設定可能。
-"trailは行末スペース。
 set list
 set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 
@@ -86,17 +79,15 @@ if has('Mac')
   map <silent> sp <esc>o<esc>v:!pbpaste<CR>
 endif
 
-" ステータスラインに開いているバッファ数を記載
-    function! CountBuffers()
-      let cnt = 0
-      for nr in range(1, bufnr('$'))
-        if buflisted(nr)
-          let cnt += 1
-        endif
-      endfor
-      return cnt
-    endfunction
-" End Function
+function! CountBuffers()
+  let cnt = 0
+  for nr in range(1, bufnr('$'))
+    if buflisted(nr)
+      let cnt += 1
+    endif
+  endfor
+  return cnt
+endfunction
 
 " hide netrw header ( toggle I )
 let g:netrw_banner=0
@@ -113,4 +104,4 @@ let g:netrw_alto = 1
 set complete=.,w,b,u,k,i
 set encoding=utf-8
 
-runtime! rc/*.vim " ~/.vim/rc/*.vim 分割した各種.vimの読み込み
+runtime! rc/*.vim
