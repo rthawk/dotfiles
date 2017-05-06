@@ -1,9 +1,9 @@
 #!/bin/zsh
 
-if which peco &> /dev/null; then
+if type peco &> /dev/null; then
     function peco-select-history() {
     local tac
-    if which tac > /dev/null; then
+    if type tac > /dev/null; then
         tac="tac"
     else
         tac="tail -r"

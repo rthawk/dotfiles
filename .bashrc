@@ -24,7 +24,7 @@ case "$(uname)" in
     ;;
   Darwin) # for OSX
     # bash-completion
-    if (which brew > /dev/null) && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+    if (type brew > /dev/null) && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
         . "$(brew --prefix)/etc/bash_completion"
     fi
 
