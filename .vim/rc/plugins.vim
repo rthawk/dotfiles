@@ -37,39 +37,14 @@ set rtp+=~/.vim/experiment
  nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
 
  Plugin 'thinca/vim-quickrun'
- Plugin 'Shougo/vimproc'
+
+ Plugin 'SirVer/ultisnips'
+ let g:UltiSnipsExpandTrigger="<C-k>"
+ let g:UltiSnipsJumpForwardTrigger="<c-b>"
+ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+ let g:UltiSnipsEditSplit="vertical"
 
  Plugin 'honza/vim-snippets'
- if has('lua')
-   Plugin 'Shougo/neocomplete'
-   Plugin 'Shougo/neosnippet'
-   Plugin 'Shougo/neosnippet-snippets'
- endif
-
- " neocomplete
- let g:neocomplete#enable_at_startup = 0
- let g:neocomplete#enable_smart_case = 1
- let g:neocomplete#sources#syntax#min_keyword_length = 3
-
- " neosnippet
- let g:neosnippet#enable_snipmate_compatibility = 1
- " Tell Neosnippet about the other snippets
- let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
-
- " Plugin key-mappings.
- imap <C-k> <Plug>(neosnippet_expand_or_jump)
- smap <C-k> <Plug>(neosnippet_expand_or_jump)
- xmap <C-k> <Plug>(neosnippet_expand_target)
-
- " SuperTab like snippets behavior.
- " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
- imap <C-k> <Plug>(neosnippet_expand_or_jump)
- "imap <expr><TAB>
- smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-       \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-
-"-------
 
  Plugin 'kana/vim-fakeclip'
  Plugin 'kana/vim-smartinput'
