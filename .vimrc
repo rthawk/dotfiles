@@ -92,13 +92,13 @@ endfunction
 " hide netrw header ( toggle I )
 let g:netrw_banner=0
 
-" netrwは常にtree view ( toggle i )
+" netrw tree view ( toggle i )
 let g:netrw_liststyle = 3
 
-" 'v'でファイルを開くときは右側に開く(default left)
+" 'v' open right (default left)
 let g:netrw_altv = 1
 
-" 'o'でファイルを開くときは下側に開く(default upper)
+" 'o' open bottom (default upper)
 let g:netrw_alto = 1
 
 set complete=.,w,b,u,k,i
