@@ -29,9 +29,6 @@ set rtp+=~/.vim/experiment
  Plugin 'tpope/vim-fugitive'
  Plugin 'ctrlpvim/ctrlp.vim'
 
- Plugin 'AndrewRadev/switch.vim'
- nnoremap - :Switch<cr>
-
  Plugin 'airblade/vim-gitgutter'
  nnoremap <silent> ,gg :<C-u>GitGutterToggle<CR>
  nnoremap <silent> ,gh :<C-u>GitGutterLineHighlightsToggle<CR>
