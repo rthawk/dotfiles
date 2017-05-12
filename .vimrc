@@ -44,11 +44,6 @@ set statusline=[%{CountBuffers()}\ buffers]\ %F%m%r%h%w\ [%{&fileencoding}]\ %{&
 " git status
 set statusline+=%{fugitive#statusline()}
 
-" g? migemo
-if has('migemo')
-	set migemo
-endif
-
 set wildmenu
 set wildmode=list:full
 set wildignore+=*.png,*.jpg,*.gif
