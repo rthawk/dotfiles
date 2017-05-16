@@ -22,9 +22,10 @@ nnoremap ,t :tabnew<CR>
 nnoremap ,T :tabnew
 
 nnoremap <C-S> :w<CR>
-nnoremap <C-X><C-N> :nohlsearch<CR>
 
-nnoremap ,zr :tabnew ~/.vim/rc/<CR>
+nnoremap ,z <C-Z>
+nnoremap ,er :tabnew ~/.vim/rc/<CR>
+nnoremap ,ec :tabnew ~/.vimrc<CR>
 
 nnoremap <C-]> g<C-]>
 
