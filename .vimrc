@@ -2,6 +2,7 @@ syntax on
 set ttyfast
 set notitle
 set number
+set relativenumber
 
 set nocursorline
 set nocursorcolumn
