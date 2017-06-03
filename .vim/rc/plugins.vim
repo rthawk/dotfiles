@@ -53,6 +53,7 @@ set rtp+=~/.vim/experiment
  Plugin 'rking/ag.vim'
 
  Plugin 'majutsushi/tagbar'
+ nnoremap <F8> :TagbarToggle<CR>
 
  Plugin 'epeli/slimux'
  map <C-c><C-c>  :SlimuxREPLSendLine<CR>

@@ -1,6 +1,3 @@
-filetype off
-filetype plugin indent off
-
 nnoremap ,, '
 nnoremap ,c :
 nnoremap ,s :w<CR>
@@ -43,7 +40,3 @@ cabbrev V Vexplore
 cabbrev ,e <ESC>
 cabbrev ,m <CR>
 
-nnoremap <C-X><C-L> :TagbarToggle<CR>
-nnoremap <F8> :TagbarToggle<CR>
-
-filetype plugin indent on
