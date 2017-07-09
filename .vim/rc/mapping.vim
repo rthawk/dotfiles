@@ -2,6 +2,7 @@ nnoremap ,, '
 nnoremap ,c :
 nnoremap ,s :w<CR>
 nnoremap ,w <C-W>
+inoremap jj <ESC>
 inoremap <C-J> <ESC>:
 
 nnoremap ,nn <ESC>i<C-R>=strftime("%H:%M")<CR>
@@ -17,6 +18,9 @@ nnoremap ,r :reg<CR>
 nnoremap ,L :tabs<CR>
 nnoremap ,t :tabnew<CR>
 nnoremap ,T :tabnew
+nnoremap ,o :copen<CR>
+nnoremap ,q :quit<CR>
+nnoremap ,j <C-]>
 
 nnoremap <C-S> :w<CR>
 
@@ -26,6 +30,7 @@ nnoremap ,ec :tabnew ~/.vimrc<CR>
 
 nnoremap <C-]> g<C-]>
 
+nnoremap <Space>o :b 
 nnoremap <Space>e :Explore.<CR>
 nnoremap <Space>r :%s/
 vnoremap <Space>r :s/
