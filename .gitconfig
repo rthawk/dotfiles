@@ -12,6 +12,7 @@
     dc = diff --cached
     br = branch
     wc = whatchanged
+    rv = remote -v
     stat  = log --stat --summary
     g = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
     logg  = log --graph --decorate --pretty=format:\"%ad [%cn] %h> %n %Cgreen%d%Creset %s %n\" --name-status
