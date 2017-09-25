@@ -30,12 +30,16 @@ if [[ -f $HOME/.nodebrew/nodebrew ]]; then
     export PATH=$HOME/.nodebrew/current/bin:$PATH
 fi
 
+export PATH="$HOME/.node_modules/bin:$PATH"
+
 # golang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 export PATH=$HOME/bin:$PATH
+
+export SDCV_PAGER="/usr/bin/env less"
 
 # less source-highlight
 function _enable_src_highlight() {
@@ -72,6 +76,7 @@ case "$(uname)" in
     ;;
 esac
 
+alias v='vim'
 alias l='ls -1'
 alias lsa='ls -a'
 alias la='ls -1a'
@@ -87,6 +92,9 @@ alias be="bundle exec"
 
 alias grepr='grep -Ir --color=auto --exclude=tags --exclude-dir={.git,.hg,.svn,.idea,.cvs}'
 alias grep='grep --color=auto'
+
+alias d="sdcv --color"
+
 # experimental settings
 if [ -f ~/.privaterc.sh ] ; then
     . ~/.privaterc.sh
