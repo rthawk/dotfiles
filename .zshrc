@@ -18,17 +18,11 @@ zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 # pushd popd
 setopt autopushd
 
-# history file path
 export HISTFILE=${HOME}/.zsh_history
 setopt share_history
-
-# ヒストリに追加されるコマンド行が古いものと同じなら古いものを削除
 setopt hist_ignore_all_dups
-
-# スペースで始まるコマンド行はヒストリリストから削除
 setopt hist_ignore_space
 
-# 前履歴の一覧表示
 function history-all {
   history -E 1
 }
