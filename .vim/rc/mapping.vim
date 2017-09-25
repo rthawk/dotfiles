@@ -10,6 +10,7 @@ nnoremap ,nd <ESC>i<C-R>=strftime("* %Y-%m-%d (%a) %H:%M")<CR>
 nnoremap ,nt <ESC>i<C-R>=strftime("%Y-%m-%d")<CR>
 
 nnoremap ,h :nohlsearch<CR>
+nnoremap <C-l> :nohlsearch<CR><C-l>
 nnoremap <Leader>bd :bd!<CR>
 
 nnoremap ,m :marks<CR>
