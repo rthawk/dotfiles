@@ -33,4 +33,6 @@ for dotfile in .?*; do
     esac
 done
 
+ln -sv "$PWD/profile.d" "$HOME"
+
 echo "done."

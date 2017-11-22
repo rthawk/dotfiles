@@ -1,5 +1,4 @@
 #!/bin/bash
-# common file for bash, zsh,etc.. all other shell
 
 stty stop undef  # C-S for history search
 stty start undef # C-Q
@@ -62,11 +61,6 @@ _enable_src_highlight
 # cd support
 . ~/.zsh/plugins/z/z.sh
 
-
-#+---------------------------------------------------------+
-# alias
-#+---------------------------------------------------------+
-
 case "$(uname)" in
   Linux)
     . ~/.shrc.linux
@@ -76,29 +70,11 @@ case "$(uname)" in
     ;;
 esac
 
-alias v='vim'
-alias l='ls -1'
-alias lsa='ls -a'
-alias la='ls -1a'
-alias ll='ls -hl'
-alias lla='ls -alh'
-
-alias p="popd"
-
-alias g='git'
-alias gn='git --no-pager'
-
-alias be="bundle exec"
-
-alias grepr='grep -Ir --color=auto --exclude=tags --exclude-dir={.git,.hg,.svn,.idea,.cvs}'
-alias grep='grep --color=auto'
-
-alias d="sdcv --color"
-
-# experimental settings
-if [ -f ~/.privaterc.sh ] ; then
-    . ~/.privaterc.sh
+if test -d ~/profile.d/; then
+  for prof in ~/profile.d/*.sh; do
+    test -r "$prof" && . "$prof"
+  done
+  unset prof
 fi
-
 
 # vim:set filetype=sh:

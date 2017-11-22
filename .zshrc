@@ -47,10 +47,6 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # completion init
 autoload -U compinit && compinit
 
-manbash () {
-    man -P "less +/\ \ \ $1" bash
-}
-
 # path separate
 autoload -U select-word-style
 select-word-style default
