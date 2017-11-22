@@ -1,13 +1,15 @@
 #!/bin/bash
-# 共通ファイルの読み込み
+
 if [ -f ~/.shrc ] ; then
     . ~/.shrc
 fi
 
 shopt -s autocd
 shopt -s globstar
+shopt -s histappend
+shopt -s dotglob
+shopt -s hostcomplete
 
-# 重複履歴を無視 && 空白から始めたコマンドを無視
 export HISTCONTROL=ignoreboth
 
 alias cd='pushd > /dev/null'
