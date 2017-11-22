@@ -6,15 +6,6 @@ stty start undef # C-Q
 # cd support
 . ~/.zsh/plugins/z/z.sh
 
-case "$(uname)" in
-  Linux)
-    . ~/.shrc.linux
-    ;;
-  Darwin) # for OSX
-    . ~/.shrc.osx
-    ;;
-esac
-
 if test -d ~/profile.d/; then
   for prof in ~/profile.d/*.sh; do
     test -r "$prof" && . "$prof"

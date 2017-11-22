@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if test "$(uname)" != 'Linux' ;then
+  return 0
+fi
+
 # for slimux on tmux 2.2
 export EVENT_NOEPOLL=1
 

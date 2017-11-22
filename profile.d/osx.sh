@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if test "$(uname)" != 'Darwin' ;then
+  return 0
+fi
+
 # homebrew
 export PATH=/usr/local/bin:$PATH
 export PATH="$PATH:/usr/local/sbin"
