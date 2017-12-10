@@ -1,3 +1,4 @@
+noremap ,i =
 nnoremap ,, '
 nnoremap ,c :
 nnoremap ,s :w<CR>
