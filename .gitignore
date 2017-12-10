@@ -5,6 +5,8 @@
 .vim/.netrwbook
 .vim/rc/*-private.vim
 
+.zsh/*.local.zsh
+
 .vimperator/info/default/
 .vimperator/info/default/macros
 .vimperator/info/default/quickmarks
