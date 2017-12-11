@@ -1,3 +1,7 @@
+if &compatible
+  set nocompatible
+endif
+
 set ttyfast
 set number
 set relativenumber
@@ -34,10 +38,7 @@ set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 set complete=.,w,b,u,k,i
 set encoding=utf-8
 
-" set foldmethod=syntax
-
 if has('path_extra')
-    "set tags+=tags
     set tags+=tags;
 endif
 
@@ -62,4 +63,8 @@ if has('packages')
 endif
 
 set rtp+=~/.vim/experiment
+
+if has("autocmd")
+  filetype plugin indent on
+endif
 

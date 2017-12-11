@@ -32,6 +32,29 @@ let g:netrw_altv = 1
 " 'o' open bottom (default upper)
 let g:netrw_alto = 1
 
+
+if exists('*SlimuxSendCode')
+  map <Space>c  :SlimuxREPLSendLine<CR>
+  vmap <Space>c :SlimuxREPLSendSelection<CR>
+endif
+
+if exists('did_plugin_ultisnips')
+  let g:UltiSnipsExpandTrigger="<C-k>"
+  let g:UltiSnipsJumpForwardTrigger="<c-b>"
+  let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+endif
+
+if exists("g:loaded_syntastic_plugin")
+  set statusline+=%#warningmsg#
+  set statusline+=%{SyntasticStatuslineFlag()}
+  set statusline+=%*
+
+  let g:syntastic_always_populate_loc_list = 1
+  let g:syntastic_auto_loc_list = 1
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 0
+endif
+
 function! CountBuffers()
   let cnt = 0
   for nr in range(1, bufnr('$'))
