@@ -2,6 +2,7 @@ escape ^Tt
 hardstatus alwayslastline '%{= kw}%02c:%s %{= .y}%H %L=%{= .b}%-w%46>%{= .r}%n %t*%{= .b}%+w%-16=%{= .y}[%l]'
 
 altscreen on
+truecolor on
 
 # base-index from 1
 bind c screen 1
