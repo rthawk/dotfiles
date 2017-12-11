@@ -63,4 +63,3 @@ endif
 
 set rtp+=~/.vim/experiment
 
-runtime! rc/*.vim

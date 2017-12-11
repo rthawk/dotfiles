@@ -1,5 +1,5 @@
 .vim/*-private.vim
-.vim/bundle
+.vim/pack/bundle
 .vim/experiment
 .vim/.netrwhist
 .vim/.netrwbook
