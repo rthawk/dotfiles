@@ -57,4 +57,10 @@ if has('Mac')
   map <silent> sp <esc>o<esc>v:!pbpaste<CR>
 endif
 
+if has('packages')
+  packadd! matchit
+endif
+
+set rtp+=~/.vim/experiment
+
 runtime! rc/*.vim
