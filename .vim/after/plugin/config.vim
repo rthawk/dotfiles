@@ -16,10 +16,10 @@ set history=1000
 syntax on
 colorscheme molokai
 
-set statusline=[%{CountBuffers()}\ buffers]\ %F%m%r%h%w\ [%{&fileencoding}]\ %{&fileformat}\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+set statusline=%F%m%r%h%w\ [POS=%04l,%04v][%p%%]\ %=[%{&fileencoding}]\ %{&fileformat}\ [LEN=%L]\ [%{CountBuffers()}\ buffers]
 
 if (exists('g:loaded_fugitive') && g:loaded_fugitive == 1)
-  set statusline+=%{fugitive#statusline()}
+  set statusline+=\ %{fugitive#statusline()}
 endif
 
 " netrw
