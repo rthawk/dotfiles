@@ -42,7 +42,9 @@ if has('path_extra')
 endif
 
 if has('unix')
-  set clipboard^=unnamedplus
+  if has('unnamedplus')
+    set clipboard^=unnamedplus
+  endif
 endif
 
 if has('win32') || has('win64')
