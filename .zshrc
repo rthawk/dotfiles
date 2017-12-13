@@ -5,17 +5,12 @@ if [ -f ~/.shrc ] ; then
     . ~/.shrc
 fi
 
-# keymode
-bindkey -e
-
-# unique path
 typeset -U fpath PATH
 
 # completion style
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 
-# pushd popd
 setopt autopushd
 
 export HISTFILE=${HOME}/.zsh_history
@@ -27,9 +22,14 @@ function history-all {
   history -E 1
 }
 
-# history search
+bindkey -e
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
+bindkey -s '^[mv' '|'
+bindkey -s '^[md' '$'
+bindkey -s '^[mt' '~/'
+bindkey -s '^[mb' ''
+bindkey -s '^[ml' ' | less^M'
 
 # left prompt
 case "$(uname)" in
