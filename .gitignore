@@ -1,11 +1,10 @@
-.vim/*-private.vim
 .vim/pack/bundle
 .vim/experiment
 .vim/.netrwhist
 .vim/.netrwbook
-.vim/rc/*-private.vim
 
 .zsh/*.local.zsh
+profile.d/*.local.sh
 
 .vimperator/info/default/
 .vimperator/info/default/macros
