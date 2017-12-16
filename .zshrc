@@ -28,7 +28,7 @@ bindkey '^N' history-beginning-search-forward
 bindkey -s '^[mv' '|'
 bindkey -s '^[md' '$'
 bindkey -s '^[mt' '~/'
-bindkey -s '^[mb' ''
+bindkey -s '^[mb' '\'
 bindkey -s '^[ml' ' | less^M'
 
 # left prompt

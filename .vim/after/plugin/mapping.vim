@@ -4,7 +4,6 @@ nnoremap ,c :
 nnoremap ,s :w<CR>
 nnoremap ,w <C-W>
 inoremap jj <ESC>
-inoremap <C-J> <ESC>:
 
 nnoremap ,nn <ESC>i<C-R>=strftime("%H:%M")<CR>
 nnoremap ,nd <ESC>i<C-R>=strftime("* %Y-%m-%d (%a) %H:%M")<CR>
@@ -27,7 +26,6 @@ nnoremap ,j <C-]>
 nnoremap <C-S> :w<CR>
 
 nnoremap ,z <C-Z>
-nnoremap ,er :tabnew ~/.vim/rc/<CR>
 nnoremap ,ec :tabnew ~/.vimrc<CR>
 
 nnoremap <C-]> g<C-]>
