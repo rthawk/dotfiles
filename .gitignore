@@ -6,7 +6,3 @@
 .zsh/*.local.zsh
 profile.d/*.local.sh
 
-.vimperator/info/default/
-.vimperator/info/default/macros
-.vimperator/info/default/quickmarks
-.vimperator/info/default/local-marks
