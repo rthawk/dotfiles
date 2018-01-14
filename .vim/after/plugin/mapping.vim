@@ -28,6 +28,9 @@ nnoremap <C-S> :w<CR>
 nnoremap ,z <C-Z>
 nnoremap ,ec :tabnew ~/.vimrc<CR>
 
+nmap ,yu 0f(yau
+nmap <silent> ,uo yy:!urlopen<CR><CR>
+
 nnoremap <C-]> g<C-]>
 
 nnoremap <Space>o :b 
