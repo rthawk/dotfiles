@@ -11,6 +11,10 @@ export BUNDLER_EDITOR=vim
 export SDCV_PAGER="/usr/bin/env less"
 
 export PATH=$HOME/bin:$PATH
+export PATH=$HOME/usr/bin:$PATH
+
+export MANPATH=$HOME/share/man:$MANPATH
+export MANPATH=$HOME/usr/share/man:$MANPATH
 
 # rbenv
 if [ -d ~/.rbenv ]  > /dev/null ; then
