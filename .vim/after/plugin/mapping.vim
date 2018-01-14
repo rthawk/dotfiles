@@ -41,8 +41,12 @@ nnoremap <Space>r :%s/
 vnoremap <Space>r :s/
 
 ab #l ------------------------------------------
+ab ,t ~
+ab ,v \|
+ab ,p +
 ia ,e <ESC>
 ia ,m <CR>
+ia ,q ```<CR>
 
 cabbrev E Explore
 cabbrev S Sexplore
