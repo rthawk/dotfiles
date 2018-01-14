@@ -34,6 +34,8 @@ nmap <silent> ,uo yy:!urlopen<CR><CR>
 nnoremap <C-]> g<C-]>
 
 nnoremap <Space>o :b 
+nnoremap <Space>n :bn<CR>
+nnoremap <Space>p :bp<CR>
 nnoremap <Space>e :Explore.<CR>
 nnoremap <Space>r :%s/
 vnoremap <Space>r :s/
