@@ -269,6 +269,10 @@ if &t_Co > 255
        hi NonText         ctermfg=239
        hi SpecialKey      ctermfg=239
    endif
+
+   if exists("g:molokai_rtcustom") && g:molokai_rtcustom == 1
+     hi Comment         ctermfg=247
+   endif
 end
 
 " Must be at the end, because of ctermbg=234 bug.

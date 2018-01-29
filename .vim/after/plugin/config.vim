@@ -13,8 +13,10 @@ set wildignore+=*DS_Store*
 set mouse=a
 set guioptions-=T
 set history=1000
-syntax on
+
 colorscheme molokai
+let g:molokai_rtcustom = 1
+syntax on
 
 set statusline=%F%m%r%h%w\ [POS=%04l,%04v][%p%%]\ %=[%{&fileencoding}]\ %{&fileformat}\ [LEN=%L]\ [%{CountBuffers()}\ buffers]
 
