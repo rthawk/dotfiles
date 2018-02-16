@@ -29,7 +29,11 @@ bindkey -s '^[mv' '|'
 bindkey -s '^[md' '$'
 bindkey -s '^[mt' '~/'
 bindkey -s '^[mb' '\'
+bindkey -s '^[mp' '+'
+bindkey -s '^[me' '='
 bindkey -s '^[ml' ' | less^M'
+bindkey -s '^[mg' ' | grep '
+bindkey -s '^[mq' '^a$(^e)'
 
 # left prompt
 case "$(uname)" in
