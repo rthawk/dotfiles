@@ -33,7 +33,7 @@ nmap <silent> ,uo yy:!urlopen<CR><CR>
 
 nnoremap <C-]> g<C-]>
 
-nnoremap <Space>o :b 
+nnoremap <Space>o :ls<CR>:b 
 nnoremap <Space>n :bn<CR>
 nnoremap <Space>p :bp<CR>
 nnoremap <Space>e :Explore.<CR>
@@ -43,6 +43,7 @@ vnoremap <Space>r :s/
 ab #l ------------------------------------------
 ab ,t ~
 ab ,v \|
+ab ,b \
 ab ,p +
 ia ,e <ESC>
 ia ,m <CR>
