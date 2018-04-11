@@ -1,0 +1,2 @@
+#!/bin/sh
+export HISTFILE=${HOME}/.mksh_history
