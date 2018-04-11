@@ -11,6 +11,7 @@ shopt -s dotglob
 shopt -s hostcomplete
 
 export HISTCONTROL=ignoreboth
+export HISTFILE=${HOME}/.bash_history
 
 alias cd='pushd > /dev/null'
 
