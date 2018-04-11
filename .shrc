@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 stty stop undef  # C-S for history search
 stty start undef # C-Q
@@ -6,11 +6,9 @@ stty start undef # C-Q
 # cd support
 . ~/.zsh/plugins/z/z.sh
 
-if test -d ~/profile.d/; then
-  for prof in ~/profile.d/*.sh; do
-    test -r "$prof" && . "$prof"
+if test -d ~/shrc.d/; then
+  for shf in ~/shrc.d/*.sh; do
+    test -r "$shf" && . "$shf"
   done
-  unset prof
+  unset shf
 fi
-
-# vim:set filetype=sh:

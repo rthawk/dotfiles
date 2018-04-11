@@ -34,5 +34,6 @@ for dotfile in .?*; do
 done
 
 ln -sv "$PWD/profile.d" "$HOME"
+ln -sv "$PWD/shrc.d" "$HOME"
 
 echo "done."
