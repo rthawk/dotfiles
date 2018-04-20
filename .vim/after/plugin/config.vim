@@ -55,6 +55,9 @@ if exists("g:loaded_syntastic_plugin")
   let g:syntastic_auto_loc_list = 1
   let g:syntastic_check_on_open = 1
   let g:syntastic_check_on_wq = 0
+
+  let g:syntastic_sh_shellcheck_args = "-e SC1071,SC1090,SC2148"
+  let g:syntastic_zsh_shellcheck_args = g:syntastic_sh_shellcheck_args
 endif
 
 function! CountBuffers()
