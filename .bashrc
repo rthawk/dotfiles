@@ -11,8 +11,9 @@ shopt -s histappend
 shopt -s dotglob
 shopt -s hostcomplete
 
-export HISTCONTROL=ignoreboth
-export HISTFILE=${HOME}/.bash_history
+HISTCONTROL=ignoreboth
+HISTFILE=${HOME}/.bash_history
+PROMPT_COMMAND="history -a; ${PROMPT_COMMAND}"
 
 alias cd='pushd > /dev/null'
 
@@ -24,7 +25,7 @@ case "$(uname)" in
     if [ -n "$SSH_CLIENT" ]; then
       text="ssh "
     fi
-      export PS1=$BASECL"$text\s:\j \W >$RESET "
+      PS1=$BASECL"$text\s:\j \W >$RESET "
     ;;
   Darwin) # for OSX
     # bash-completion
@@ -32,8 +33,8 @@ case "$(uname)" in
         . "$(brew --prefix)/etc/bash_completion"
     fi
 
-    BLUE="\[\033[0;34m\]"
-    WHITE="\[\033[0;37m\]"
-    export PS1=$BLUE"b>$WHITE \W \$ "
+      BLUE="\[\033[0;34m\]"
+      WHITE="\[\033[0;37m\]"
+      PS1=$BLUE"b>$WHITE \W \$ "
     ;;
 esac
