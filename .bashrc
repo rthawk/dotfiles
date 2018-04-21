@@ -5,6 +5,7 @@ if [ -f ~/.shrc ] ; then
 fi
 
 shopt -s autocd
+shopt -s extglob
 shopt -s globstar
 shopt -s histappend
 shopt -s dotglob
