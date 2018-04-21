@@ -4,10 +4,6 @@ fi
 
 typeset -U fpath PATH
 
-# completion style
-zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
-zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
-
 setopt autopushd
 setopt extendedglob
 
@@ -15,6 +11,8 @@ export HISTFILE=${HOME}/.zsh_history
 setopt share_history
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
+setopt autocd
+cdpath=(.. ~)
 
 function history-all {
   history -E 1
@@ -43,21 +41,14 @@ case "$(uname)" in
     ;;
 esac
 
-# zsh completion
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-# completion init
 autoload -U compinit && compinit
+autoload -U select-word-style && select-word-style default
 
-# path separate
-autoload -U select-word-style
-select-word-style default
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':zle:*' word-chars " /=;@:{},|"
 zstyle ':zle:*' word-style unspecified
-
-# auto cd
-setopt AUTO_CD
-cdpath=(.. ~)
 
 for file in ~/.zsh/*.zsh; do
     . "$file"
