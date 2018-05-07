@@ -31,15 +31,7 @@ bindkey -s '^[ml' ' | less^M'
 bindkey -s '^[mg' ' | grep '
 bindkey -s '^[mq' '^a$(^e)'
 
-# left prompt
-case "$(uname)" in
-  Linux)
-    export PS1="%n@%M > %1~%(1j, job:%j,) %(!.#.$) "
-    ;;
-  Darwin) # for OSX
-    export PS1="> %1~%(1j, job:%j,) %(!.#.$) "
-    ;;
-esac
+PS1="> %3~%(1j, job:%j,) %(!.#.$) "
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
