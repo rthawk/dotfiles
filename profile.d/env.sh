@@ -1,8 +1,8 @@
 #!/bin/sh
 
-export HISTSIZE=20000
-export SAVEHIST=20000
-export HISTFILESIZE=20000
+export HISTSIZE=50000
+export SAVEHIST=50000
+export HISTFILESIZE=50000
 export HISTTIMEFORMAT='%Y%m%d %T ';
 
 export EDITOR=/usr/bin/vim
