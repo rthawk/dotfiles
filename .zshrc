@@ -31,7 +31,7 @@ bindkey -s '^[ml' ' | less^M'
 bindkey -s '^[mg' ' | grep '
 bindkey -s '^[mq' '^a$(^e)'
 
-PS1="> %3~%(1j, job:%j,) %(!.#.$) "
+PS1="%3~ %(1j,job:%j ,)%_%(!.#.$) "
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
