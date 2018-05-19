@@ -18,7 +18,7 @@ colorscheme molokai
 let g:molokai_rtcustom = 1
 syntax on
 
-set statusline=%F%m%r%h%w\ [POS=%04l,%04v][%p%%]\ %=[%{&fileencoding}]\ %{&fileformat}\ [LEN=%L]\ [%{CountBuffers()}\ buffers]
+set statusline=%n\ %F\ %m%r%h%w%q%y\ \(%l,%v\ %p%%/%L\)\ %=%{&fileencoding}/%{&fileformat}
 
 if (exists('g:loaded_fugitive') && g:loaded_fugitive == 1)
   set statusline+=\ %{fugitive#statusline()}
@@ -29,10 +29,6 @@ endif
 let g:netrw_banner=0
 " tree view (toggle i)
 let g:netrw_liststyle = 3
-" 'v' open right (default left)
-let g:netrw_altv = 1
-" 'o' open bottom (default upper)
-let g:netrw_alto = 1
 
 
 if exists('*SlimuxSendCode')
@@ -59,14 +55,4 @@ if exists("g:loaded_syntastic_plugin")
   let g:syntastic_sh_shellcheck_args = "-e SC1071,SC1090,SC2148"
   let g:syntastic_zsh_shellcheck_args = g:syntastic_sh_shellcheck_args
 endif
-
-function! CountBuffers()
-  let cnt = 0
-  for nr in range(1, bufnr('$'))
-    if buflisted(nr)
-      let cnt += 1
-    endif
-  endfor
-  return cnt
-endfunction
 
