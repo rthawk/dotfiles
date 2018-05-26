@@ -27,8 +27,8 @@ bindkey -s '^[mt' '~/'
 bindkey -s '^[mb' '\'
 bindkey -s '^[mp' '+'
 bindkey -s '^[me' '='
-bindkey -s '^[ml' ' | less^M'
-bindkey -s '^[mg' ' | grep '
+bindkey -s '^[ml' '^e | less^M'
+bindkey -s '^[mg' '^e | grep '
 bindkey -s '^[mq' '^a$(^e)'
 
 PS1="%3~ %(1j,job:%j ,)%_%(!.#.$) "
