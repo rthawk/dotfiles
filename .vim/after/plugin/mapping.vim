@@ -1,5 +1,6 @@
 noremap ,i =
-nnoremap ,, '
+nnoremap ,, ,
+nnoremap ,. '
 nnoremap ,c :
 nnoremap ,s :w<CR>
 nnoremap ,w <C-W>
@@ -25,7 +26,8 @@ nnoremap ,gj g<C-]>
 nnoremap ,z <C-Z>
 nnoremap ,f :find **/*
 
-nmap ,yu 0f(yau
+nmap ,yu 0f(lyi(
+nmap ,yl 0yg_
 nmap <silent> ,uo yy:!urlopen<CR><CR>
 
 nnoremap <Space>o :ls<CR>:b 
