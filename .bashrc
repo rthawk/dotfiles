@@ -4,11 +4,18 @@ if [ -f ~/.shrc ] ; then
     . ~/.shrc
 fi
 
+stty werase undef
+bind '\C-w:unix-filename-rubout'
+
 shopt -s autocd
+shopt -s cdable_vars
+shopt -s cdspell
+shopt -s dirspell
+shopt -s dotglob
 shopt -s extglob
 shopt -s globstar
 shopt -s histappend
-shopt -s dotglob
+shopt -s histverify
 shopt -s hostcomplete
 
 HISTCONTROL=ignoreboth
@@ -17,24 +24,12 @@ PROMPT_COMMAND="history -a; ${PROMPT_COMMAND}"
 
 alias cd='pushd > /dev/null'
 
+PS1="\W:\j:\$ "
+
 case "$(uname)" in
-  Linux)
-    BASECL="\[$(tput setaf 38)\]"
-    RESET="\[$(tput sgr0)\]"
-
-    if [ -n "$SSH_CLIENT" ]; then
-      text="ssh "
-    fi
-      PS1=$BASECL"$text\s:\j \W >$RESET "
-    ;;
   Darwin) # for OSX
-    # bash-completion
     if (type brew > /dev/null) && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
-        . "$(brew --prefix)/etc/bash_completion"
+      . "$(brew --prefix)/etc/bash_completion"
     fi
-
-      BLUE="\[\033[0;34m\]"
-      WHITE="\[\033[0;37m\]"
-      PS1=$BLUE"b>$WHITE \W \$ "
     ;;
 esac

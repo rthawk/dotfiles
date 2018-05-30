@@ -11,6 +11,7 @@ alias p="popd"
 
 alias g='git'
 alias gn='git --no-pager'
+alias cdg='cd $(git rev-parse --show-toplevel)'
 
 alias be="bundle exec"
 
