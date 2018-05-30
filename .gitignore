@@ -1,8 +1,7 @@
 .vim/pack/bundle
-.vim/experiment
 .vim/.netrwhist
 .vim/.netrwbook
 
 .zsh/*.local.zsh
 profile.d/*.local.sh
-
+shrc.d/*.local.sh

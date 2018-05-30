@@ -12,15 +12,8 @@ setopt share_history
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
 setopt autocd
-cdpath=(.. ~)
-
-function history-all {
-  history -E 1
-}
 
 bindkey -e
-bindkey '^P' history-beginning-search-backward
-bindkey '^N' history-beginning-search-forward
 bindkey -s '^[mv' '|'
 bindkey -s '^[md' '$'
 bindkey -s '^[mt' '~/'
