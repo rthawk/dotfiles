@@ -16,21 +16,18 @@ export PATH=$HOME/usr/bin:$PATH
 export MANPATH=$HOME/share/man:$MANPATH
 export MANPATH=$HOME/usr/share/man:$MANPATH
 
-# rbenv
-if [ -d ~/.rbenv ]  > /dev/null ; then
+if test -d "$("$HOME/.rbenv" > /dev/null)" ; then
     export PATH="$HOME/.rbenv/bin:$PATH"
     export PATH="$PATH:$HOME/.rbenv/shims"
     eval "$(rbenv init - --no-rehash )"
 fi
 
-# nodebrew
-if [[ -f $HOME/.nodebrew/nodebrew ]]; then
+if test -f "$HOME/.nodebrew/nodebrew" ; then
     export PATH=$HOME/.nodebrew/current/bin:$PATH
 fi
 
 export PATH="$HOME/.node_modules/bin:$PATH"
 
-# golang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin

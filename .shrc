@@ -1,11 +1,4 @@
 #!/bin/sh
 
-stty stop undef  # C-S for history search
-stty start undef # C-Q
+test -r "$HOME/profile.d/aliases.sh" && . "$HOME/profile.d/aliases.sh"
 
-if test -d ~/shrc.d/; then
-  for shf in ~/shrc.d/*.sh; do
-    test -r "$shf" && . "$shf"
-  done
-  unset shf
-fi
