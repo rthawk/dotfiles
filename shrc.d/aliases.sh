@@ -14,8 +14,9 @@ alias gn='git --no-pager'
 
 alias be="bundle exec"
 
-alias grepr='grep -Ir --color=auto --exclude=tags --exclude-dir={.git,.hg,.svn,.idea,.cvs}'
 alias grep='grep --color=auto'
+alias grepr='grep -Ir --exclude=tags --exclude-dir={.git,.hg,.svn,.idea,.cvs}'
 
 alias d="sdcv --color"
-
+alias hs='fc -l -25'
+alias hsa='fc -l 1'
