@@ -24,7 +24,7 @@ PROMPT_COMMAND="history -a; ${PROMPT_COMMAND}"
 
 alias cd='pushd > /dev/null'
 
-PS1="\W:\j:\$ "
+PS1="\\W:\\j:\$ "
 
 case "$(uname)" in
   Darwin) # for OSX
