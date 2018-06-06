@@ -22,7 +22,5 @@ HISTCONTROL=ignoreboth
 HISTFILE=${HOME}/.bash_history
 PROMPT_COMMAND="history -a; ${PROMPT_COMMAND}"
 
-alias cd='pushd > /dev/null'
-
 PS1="\\W:\\j:\$ "
 
