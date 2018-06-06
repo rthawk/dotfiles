@@ -26,10 +26,3 @@ alias cd='pushd > /dev/null'
 
 PS1="\\W:\\j:\$ "
 
-case "$(uname)" in
-  Darwin) # for OSX
-    if (type brew > /dev/null) && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
-      . "$(brew --prefix)/etc/bash_completion"
-    fi
-    ;;
-esac

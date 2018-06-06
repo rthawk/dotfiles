@@ -15,3 +15,9 @@ export LSCOLORS=dxgxcxdxCxegedabagacad
 alias ls='ls -G'
 alias pwdcp='pwd | pbcopy'
 
+if test "$PS1" && test "$BASH" && test -z ${POSIXLY_CORRECT+x}; then
+  if (type brew > /dev/null) && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
+    . "$(brew --prefix)/etc/bash_completion"
+  fi
+fi
+
