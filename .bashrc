@@ -5,11 +5,12 @@ if [ -f ~/.shrc ] ; then
 fi
 
 stty werase undef
-bind '\C-w:unix-filename-rubout'
 
 shopt -s autocd
 shopt -s cdable_vars
 shopt -s cdspell
+shopt -s checkjobs
+shopt -s direxpand
 shopt -s dirspell
 shopt -s dotglob
 shopt -s extglob
