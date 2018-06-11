@@ -24,12 +24,8 @@ if (exists('g:loaded_fugitive') && g:loaded_fugitive == 1)
   set statusline+=\ %{fugitive#statusline()}
 endif
 
-" netrw
-" hide header (toggle I)
 let g:netrw_banner=0
-" tree view (toggle i)
 let g:netrw_liststyle = 3
-
 
 if exists('*SlimuxSendCode')
   map <Space>c  :SlimuxREPLSendLine<CR>
