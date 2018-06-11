@@ -6,6 +6,7 @@ export HISTFILESIZE=50000
 export HISTTIMEFORMAT='%Y%m%d %T ';
 
 export EDITOR='vim'
+export FCEDIT=$EDITOR
 export SDCV_PAGER='less'
 
 export PATH=$HOME/bin:$PATH
