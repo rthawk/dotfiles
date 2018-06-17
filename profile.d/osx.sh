@@ -10,9 +10,6 @@ stty discard undef # C-o
 export PATH=/usr/local/bin:$PATH
 export PATH="$PATH:/usr/local/sbin"
 
-export LSCOLORS=dxgxcxdxCxegedabagacad
-
-alias ls='ls -G'
 alias pwdcp='pwd | pbcopy'
 
 if test "$PS1" && test "$BASH" && test -z ${POSIXLY_CORRECT+x}; then
