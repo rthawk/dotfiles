@@ -12,13 +12,7 @@ echo "installing dotfiles\n---"
 
 for dotfile in .?*; do
     case $dotfile in
-        *.elc)
-            continue;;
-        ..)
-            continue;;
-        .git)
-            continue;;
-        .gitignore)
+        *.elc | .. | .git | .gitignore | opt )
             continue;;
         *)
 
@@ -32,8 +26,5 @@ for dotfile in .?*; do
             ;;
     esac
 done
-
-ln -sv "$PWD/profile.d" "$HOME"
-ln -sv "$PWD/shrc.d" "$HOME"
 
 echo "done."
