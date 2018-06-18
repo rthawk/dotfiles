@@ -30,22 +30,7 @@ set laststatus=2
 set complete=.,w,b,u,k,i
 set encoding=utf-8
 set fileformats=unix,dos,mac
-
-if has('unix')
-  if has('unnamedplus')
-    set clipboard^=unnamedplus
-  endif
-endif
-
-if has('Mac')
-  set clipboard=unnamed
-  vmap <silent> sy :!pbcopy; pbpaste<CR>
-  map <silent> sp <esc>o<esc>v:!pbpaste<CR>
-endif
-
-if has('win32') || has('win64')
-
-endif
+set clipboard^=unnamed,unnamedplus
 
 if has('packages')
   packadd! matchit

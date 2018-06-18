@@ -1,5 +1,4 @@
 set showcmd
-
 set notitle
 set nocursorline
 set nocursorcolumn
@@ -10,6 +9,7 @@ set wildmode=list:full
 set wildignore+=*.png,*.jpg,*.gif
 set wildignore+=*DS_Store*
 
+set shm+=I
 set mouse=a
 set guioptions-=T
 set history=1000
