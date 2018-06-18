@@ -1,10 +1,6 @@
-#!/bin/bash
-
 if test "$(uname)" != 'Darwin' ;then
   return 0
 fi
-
-stty discard undef # C-o
 
 # homebrew
 export PATH=/usr/local/bin:$PATH

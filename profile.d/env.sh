@@ -1,13 +1,11 @@
-#!/bin/sh
-
 export HISTSIZE=50000
 export SAVEHIST=50000
 export HISTFILESIZE=50000
-export HISTTIMEFORMAT='%Y%m%d %T ';
 
 export EDITOR='vim'
 export FCEDIT=$EDITOR
 export SDCV_PAGER='less'
+export LESS='-RMFWi~'
 
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/usr/bin:$PATH

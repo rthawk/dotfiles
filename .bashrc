@@ -1,10 +1,6 @@
-#!/bin/bash
-
 if [ -f ~/.shrc ] ; then
     . ~/.shrc
 fi
-
-stty werase undef
 
 shopt -s autocd
 shopt -s cdable_vars
