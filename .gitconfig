@@ -9,12 +9,13 @@
     sm  = submodule status
     cv = commit -v
     cva = commit -v --amend
-    ci = commit -a
+    ca = commit -a
     cm = commit -m
-    civ = commit -av
-    civa = commit -av --amend
+    cav = commit -av
+    cava = commit -av --amend
     d = diff
     dc = diff --cached
+    b = branch
     br = branch
     wc = whatchanged
     p  = push
@@ -41,12 +42,6 @@
 
 [color]
     ui = true
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [push]
 	default = simple
 [filter "media"]
