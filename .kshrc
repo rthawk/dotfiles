@@ -1,10 +1,6 @@
-#!/bin/sh
-
-HISTFILE=${HOME}/.mksh_history
+HISTFILE=${HOME}/.ksh_history
 
 bind   '^l'=clear-screen
-bind   '^n'=search-history-down
-bind   '^p'=search-history-up
 bind   '^w'=delete-word-backward
 bind  '^xf'=complete-file
 bind '^x^f'=list-file
