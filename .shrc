@@ -1,1 +1,0 @@
-test -r "$HOME/profile.d/aliases.sh" && . "$HOME/profile.d/aliases.sh"

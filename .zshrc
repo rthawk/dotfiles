@@ -1,7 +1,3 @@
-if [ -f ~/.shrc ] ; then
-    . ~/.shrc
-fi
-
 typeset -U fpath PATH
 fpath=(/usr/local/share/zsh-completions $fpath)
 PS1="%3~ %(1j,job:%j ,)%_%(!.#.$) "

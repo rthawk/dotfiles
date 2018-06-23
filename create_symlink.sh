@@ -1,14 +1,13 @@
 #!/bin/sh
 
 BACKUPDIR=$HOME/dotfiles.bk.$(date +"%Y-%m-%d.%H%M%S")
-mkdir $BACKUPDIR
+mkdir "$BACKUPDIR"
 
-cd $(dirname $0)
+cd "$(dirname "$0")" || return
 
-echo "home directory path: $HOME"
 echo "backup directory:  $BACKUPDIR"
-echo "dotfiles path:       $PWD \n"
-echo "installing dotfiles\n---"
+echo "dotfiles path:       $PWD"
+echo "installing dotfiles"
 
 for dotfile in .?*; do
     case $dotfile in
@@ -20,7 +19,7 @@ for dotfile in .?*; do
             [ -L "$HOME/$dotfile" ] && unlink "$HOME/$dotfile"
 
             # backup old file
-            [ -e "$HOME/$dotfile" ] && mv -v "$HOME/$dotfile" $BACKUPDIR
+            [ -e "$HOME/$dotfile" ] && mv -v "$HOME/$dotfile" "$BACKUPDIR"
 
             ln -sv "$PWD/$dotfile" "$HOME"
             ;;
