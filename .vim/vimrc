@@ -7,7 +7,7 @@ set noswapfile
 set noundofile
 
 set ttyfast
-set number
+set nonumber
 set showmatch
 set ignorecase
 set smartcase
@@ -26,7 +26,7 @@ set list
 set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 
 set backspace=indent,eol,start
-set laststatus=2
+set laststatus=0
 set complete=.,w,b,u,k,i
 set encoding=utf-8
 set fileformats=unix,dos,mac

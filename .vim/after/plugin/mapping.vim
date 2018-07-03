@@ -21,9 +21,14 @@ nnoremap ,t :tabnew<CR>
 nnoremap ,T :tabnew
 nnoremap ,o :copen<CR>
 nnoremap ,q :quit<CR>
+nnoremap ,Q :quit!<CR>
 nnoremap ,j <C-]>
+nnoremap ,J :jumps<CR>
+nnoremap ,C :changes<CR>
 nnoremap ,gj g<C-]>
 nnoremap ,z <C-Z>
+nnoremap ,N :syntax on<CR>
+nnoremap ,F :syntax off<CR>
 nnoremap ,f :find **/*
 
 nmap ,yu 0f(lyi(
