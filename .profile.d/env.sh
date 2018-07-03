@@ -25,7 +25,7 @@ fi
 
 export PATH="$HOME/.node_modules/bin:$PATH"
 
-export GOPATH=$HOME/go
+export GOPATH=$HOME/var/go
 export PATH=$PATH:$GOPATH/bin
 
 export ENV=$HOME/.kshrc
