@@ -2,15 +2,17 @@ if test "$(uname)" != 'Darwin' ;then
   return 0
 fi
 
-# homebrew
-export PATH=/usr/local/bin:$PATH
-export PATH="$PATH:/usr/local/sbin"
-
 alias pwdcp='pwd | pbcopy'
 
+! ( type brew > /dev/null ) && return 0
+
+BPREFIX="$(brew --prefix)"
+PATH=$BPREFIX/bin:$PATH
+PATH=$BPREFIX/sbin:$PATH
+export PATH
+
 if test "$PS1" && test "$BASH" && test -z ${POSIXLY_CORRECT+x}; then
-  if (type brew > /dev/null) && [ -f "$(brew --prefix)/etc/bash_completion" ]; then
-    . "$(brew --prefix)/etc/bash_completion"
-  fi
+  . "$BPREFIX/etc/bash_completion"
 fi
 
+unset BPREFIX

@@ -50,9 +50,6 @@ ia ,e <ESC>
 ia ,m <CR>
 ia ,q ```<CR>
 
-cabbrev E Explore
-cabbrev S Sexplore
-cabbrev V Vexplore
 cabbrev ,e <ESC>
 cabbrev ,m <CR>
 

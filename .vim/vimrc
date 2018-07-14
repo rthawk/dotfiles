@@ -5,17 +5,13 @@ endif
 set nobackup
 set noswapfile
 set noundofile
-
-set ttyfast
 set nonumber
-set showmatch
-set ignorecase
-set smartcase
 set autoread
+set ignorecase
 set modeline
-
-set visualbell t_vb=
-set background=dark
+set showmatch
+set smartcase
+set ttyfast
 
 set expandtab
 set tabstop=2
@@ -24,7 +20,8 @@ set shiftwidth=2
 
 set list
 set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
-
+set background=dark
+set visualbell t_vb=
 set backspace=indent,eol,start
 set laststatus=0
 set complete=.,w,b,u,k,i
@@ -32,11 +29,5 @@ set encoding=utf-8
 set fileformats=unix,dos,mac
 set clipboard^=unnamed,unnamedplus
 
-if has('packages')
-  packadd! matchit
-endif
-
-if has("autocmd")
-  filetype plugin indent on
-endif
+filetype plugin indent on
 

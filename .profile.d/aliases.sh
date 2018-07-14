@@ -31,3 +31,4 @@ alias d="sdcv --color"
 
 alias xclipic='xclip -in -selection clipboard'
 alias xclipoc='xclip -out -selection clipboard'
+

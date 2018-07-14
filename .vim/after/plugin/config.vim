@@ -14,6 +14,13 @@ set mouse=a
 set guioptions-=T
 set history=1000
 
+if has('packages')
+  packadd! matchit
+endif
+
+let g:netrw_banner=0
+let g:netrw_liststyle = 3
+
 colorscheme molokai
 let g:molokai_rtcustom = 1
 syntax on
@@ -23,9 +30,6 @@ set statusline=%n\ %F\ %m%r%h%w%q%y\ \(%l,%v\ %p%%/%L\)\ %=%{&fileencoding}/%{&f
 if (exists('g:loaded_fugitive') && g:loaded_fugitive == 1)
   set statusline+=\ %{fugitive#statusline()}
 endif
-
-let g:netrw_banner=0
-let g:netrw_liststyle = 3
 
 if exists('*SlimuxSendCode')
   map <Space>c  :SlimuxREPLSendLine<CR>

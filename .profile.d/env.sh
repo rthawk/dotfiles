@@ -29,3 +29,4 @@ export GOPATH=$HOME/var/go
 export PATH=$PATH:$GOPATH/bin
 
 export ENV=$HOME/.kshrc
+
