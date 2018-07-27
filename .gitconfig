@@ -14,6 +14,7 @@
     cav = commit -av
     cava = commit -av --amend
     d = diff
+    dl = difftool
     dc = diff --cached
     b = branch
     br = branch
@@ -37,9 +38,14 @@
 [core]
 	pager = less -r
 	excludesfile = ~/.gitignore_global
-	editor = /usr/bin/vim
+	editor = vim
 [pager]
     grep = false
+
+[diff]
+  tool = vimdiff
+[difftool]
+  prompt = false
 
 [color]
     ui = true
