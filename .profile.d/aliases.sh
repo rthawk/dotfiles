@@ -21,6 +21,7 @@ alias gn='git --no-pager'
 alias cdg='cd $(git rev-parse --show-toplevel)'
 alias hs='fc -l -25'
 alias hsa='fc -l 1'
+alias cl='clear'
 
 alias 1='fg %1'
 alias 2='fg %2'

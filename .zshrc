@@ -1,15 +1,13 @@
 typeset -U fpath PATH
-fpath=(/usr/local/share/zsh-completions $fpath)
 PS1="%3~ %(1j,job:%j ,)%_%(!.#.$) "
+HISTFILE=${HOME}/.zsh_history
 
+setopt autocd
 setopt autopushd
 setopt extendedglob
-
-export HISTFILE=${HOME}/.zsh_history
 setopt share_history
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
-setopt autocd
 
 autoload -U compinit && compinit
 autoload -U select-word-style && select-word-style default
@@ -20,7 +18,7 @@ zstyle ':zle:*' word-style unspecified
 
 bindkey -e
 
-for file in ~/.zsh/*.zsh; do
+for file in ~/.profile.d/*.zsh; do
     . "$file"
 done
 

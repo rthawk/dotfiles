@@ -1,9 +1,9 @@
 export HISTSIZE=50000
-export SAVEHIST=50000
-export HISTFILESIZE=50000
+export SAVEHIST=$HISTSIZE
+export HISTFILESIZE=$HISTSIZE
 
-export EDITOR='vim'
-export FCEDIT=$EDITOR
+export VISUAL='vi'
+export FCEDIT=$VISUAL
 export SDCV_PAGER='less'
 export LESS='-RMFWi~'
 

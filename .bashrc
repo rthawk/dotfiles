@@ -10,10 +10,10 @@ shopt -s globstar
 shopt -s histappend
 shopt -s histverify
 shopt -s hostcomplete
+shopt -s nocaseglob
+shopt -s nocasematch
 
 HISTCONTROL=ignoredups:ignorespace:erasedups
-HISTFILE=${HOME}/.bash_history
 PROMPT_COMMAND="history -a; ${PROMPT_COMMAND}"
-
 PS1='\W:\j:\$ '
 
