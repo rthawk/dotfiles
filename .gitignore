@@ -2,7 +2,4 @@
 .vim/.netrwhist
 .vim/.netrwbook
 
-*.local.sh
-.zsh/*.local.zsh
-profile.d/*.local.sh
-shrc.d/*.local.sh
+.profile.d/*.local.*
