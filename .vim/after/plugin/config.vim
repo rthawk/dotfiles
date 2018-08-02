@@ -6,7 +6,7 @@ set hlsearch
 
 set wildmenu
 set wildmode=list:full
-set wildignore+=*.png,*.jpg,*.gif
+set wildignore+=*.png,*.jpg,*.gif,*.o
 set wildignore+=*DS_Store*
 
 set shm+=I
@@ -19,10 +19,9 @@ if has('packages')
 endif
 
 let g:netrw_banner=0
-let g:netrw_liststyle = 3
+let g:netrw_liststyle = 0
 
 colorscheme molokai
-let g:molokai_rtcustom = 1
 syntax on
 
 set statusline=%n\ %F\ %m%r%h%w%q%y\ \(%l,%v\ %p%%/%L\)\ %=%{&fileencoding}/%{&fileformat}
