@@ -42,6 +42,9 @@ nnoremap <Space>e :Explore.<CR>
 nnoremap <Space>r :%s/
 vnoremap <Space>r :s/
 
+nnoremap ss s
+nnoremap sj :e #<CR>
+
 ab ,t ~
 ab ,v \|
 ab ,b \

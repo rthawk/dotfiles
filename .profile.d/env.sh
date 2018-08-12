@@ -9,6 +9,7 @@ export LESS='-RMFWi~'
 
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/usr/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 export MANPATH=$HOME/share/man:$MANPATH
 export MANPATH=$HOME/usr/share/man:$MANPATH
