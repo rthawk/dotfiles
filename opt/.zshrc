@@ -1,6 +1,7 @@
 typeset -U fpath PATH
 PS1="%3~ %(1j,job:%j ,)%_%(!.#.$) "
 HISTFILE=${HOME}/.zsh_history
+SAVEHIST=$HISTSIZE
 
 setopt autocd
 setopt autopushd
