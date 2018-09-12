@@ -2,6 +2,7 @@ export HISTSIZE=50000
 
 export VISUAL='vi'
 export FCEDIT=$VISUAL
+export MANPAGER='less'
 export SDCV_PAGER='less'
 export LESS='-RMFWi~'
 
