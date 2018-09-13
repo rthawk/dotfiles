@@ -1,7 +1,3 @@
-if test "$(uname)" != 'Darwin' ;then
-  return 0
-fi
-
 alias pwdcp='pwd | pbcopy'
 
 ! ( type brew > /dev/null ) && return 0
