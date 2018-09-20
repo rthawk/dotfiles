@@ -30,7 +30,7 @@
     lcr  = log --graph --oneline --branches --tags --remotes -c
     lgt  = log --graph --oneline --branches --tags --remotes --stat
     lgs  = log --graph --oneline --branches --tags --remotes --summary
-    lgcs  = log --graph --oneline --branches --tags --remotes --compact-summary
+    lgcs = log --graph --oneline --branches --tags --remotes --compact-summary
     lgn  = log --graph --oneline --branches --tags --remotes --name-status
 
 [include]
