@@ -9,6 +9,6 @@ fi
 OS=$(uname)
 test -r "$HOME/.profile.d/$OS" && . "$HOME/.profile.d/$OS"
 
-PATH=$(printf %s "$PATH" | awk -vRS=: '!a[$0]++' | paste -s -d: -)
+PATH=$(printf %s "$PATH" | awk -v RS=: '!a[$0]++' | paste -s -d: -)
 export PATH
 
