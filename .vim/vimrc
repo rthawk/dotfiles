@@ -11,15 +11,14 @@ set ignorecase
 set showmatch
 set smartcase
 set ttyfast
+set novisualbell
 
 set expandtab
 set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set shiftwidth=0
 
 set list
 set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
-set visualbell t_vb=
 set backspace=indent,eol,start
 set laststatus=0
 set complete=.,w,b,u,k,i
