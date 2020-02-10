@@ -18,4 +18,5 @@ shopt -s \
 HISTCONTROL=ignoredups:ignorespace:erasedups
 PROMPT_COMMAND="history -a; ${PROMPT_COMMAND}"
 PS1='\W:\j:\$ '
+alias r='fc -s'
 
