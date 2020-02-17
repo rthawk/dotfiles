@@ -2,4 +2,4 @@
 .vim/.netrwhist
 .vim/.netrwbook
 
-.profile.d/*.local.*
+.profile.d/*/*.local.*

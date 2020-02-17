@@ -1,5 +1,5 @@
 
-for prof in "$HOME"/.profile.d/*.sh ; do
+for prof in "$HOME"/.profile.d/login/*.sh ; do
   test -r "$prof" && . "$prof"
 done ; unset prof
 
