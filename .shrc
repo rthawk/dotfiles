@@ -1,5 +1,9 @@
 HISTFILE=${HOME}/.${0#-}_history
 PS1='\$ '
+stty stop    undef # C-S
+stty start   undef # C-Q
+stty werase  undef # C-W
+stty discard undef # C-O
 
 for i in "$HOME"/.profile.d/*.shrc ; do
   test -r "$i" && . "$i"
