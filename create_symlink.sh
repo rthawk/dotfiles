@@ -11,7 +11,7 @@ echo "installing dotfiles"
 
 for dotfile in .?*; do
     case $dotfile in
-        *.elc | .. | .git | .gitignore | opt )
+        .. | .git | .gitignore )
             continue;;
         *)
 
@@ -21,7 +21,8 @@ for dotfile in .?*; do
             # backup old file
             [ -e "$HOME/$dotfile" ] && mv -v "$HOME/$dotfile" "$BACKUPDIR"
 
-            ln -sv "$PWD/$dotfile" "$HOME"
+            echo "symlink $PWD/$dotfile -> $HOME"
+            ln -s "$PWD/$dotfile" "$HOME"
             ;;
     esac
 done
