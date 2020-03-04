@@ -1,18 +1,26 @@
 set bell-style none
-set enable-keypad on
+set bind-tty-special-chars off
+set blink-matching-paren on
+set enable-keypad off
 set visible-stats on
 set colored-stats on
+set colored-completion-prefix on
 set completion-ignore-case on
 set completion-map-case on
 set mark-symlinked-directories on
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
 set menu-complete-display-prefix on
+set show-mode-in-prompt on
 
+TAB: menu-complete
 "\C-w": unix-filename-rubout
-"\e[A": history-search-backward
-"\e[B": history-search-forward
-
+"\e[A": history-search-backward # up
+"\e[B": history-search-forward  # down
 "\C-p": history-substring-search-backward
 "\C-n": history-substring-search-forward
+
+$if Bash
+  Space: magic-space
+$endif
 
