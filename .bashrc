@@ -1,22 +1,9 @@
-
 . $HOME/.shrc
-shopt -s \
-  autocd \
-  cdable_vars \
-  cdspell \
-  checkjobs \
-  direxpand \
-  dirspell \
-  dotglob \
-  extglob \
-  globstar \
-  histappend \
-  histverify \
-  hostcomplete \
-  nocaseglob
 
-HISTCONTROL=ignoredups:ignorespace:erasedups
-PROMPT_COMMAND="history -a; ${PROMPT_COMMAND}"
+shopt -s \
+autocd cdable_vars cdspell checkhash checkjobs cmdhist direxpand \
+dirspell dotglob extglob globstar nocaseglob histverify histappend
+
 PS1='\W:\j:\$ '
 alias r='fc -s'
 

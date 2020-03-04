@@ -1,9 +1,7 @@
 HISTFILE=${HOME}/.${0#-}_history
+HISTCONTROL=ignoredups:ignorespace:erasedups
 PS1='\$ '
-stty stop    undef # C-S
-stty start   undef # C-Q
-stty werase  undef # C-W
-stty discard undef # C-O
+stty stop undef start undef # C-S, C-Q
 
 for i in "$HOME"/.profile.d/rc/*.sh ; do
   test -r "$i" && . "$i"
