@@ -22,16 +22,16 @@
     p  = push
     rv = remote -v
     stat  = log --stat --summary
-    g = grep
-    ls = ls-files
-    l  = log --graph --oneline --branches --tags --remotes
-    lc = log --graph --patch-with-stat
+    g   = grep
+    ls  = ls-files
+    l   = log --color --graph --pretty=format:'%cs %C(yellow)%<(20)%cr%Creset %<(48)%s %C(green)%d%Creset'
+    lo  = log --graph --oneline --branches --tags --remotes
+    lc  = log --graph --patch-with-stat
     lt  = log --graph --oneline --branches --tags --remotes --compact-summary
-    lcr  = log --graph --oneline --branches --tags --remotes -c
-    lgt  = log --graph --oneline --branches --tags --remotes --stat
-    lgs  = log --graph --oneline --branches --tags --remotes --summary
-    lgcs = log --graph --oneline --branches --tags --remotes --compact-summary
-    lgn  = log --graph --oneline --branches --tags --remotes --name-status
+    lcr = log --graph --oneline --branches --tags --remotes -c
+    lgt = log --graph --oneline --branches --tags --remotes --stat
+    lgs = log --graph --oneline --branches --tags --remotes --summary
+    lgn = log --graph --oneline --branches --tags --remotes --name-status
 
 [include]
   path = .gitconfig.local
