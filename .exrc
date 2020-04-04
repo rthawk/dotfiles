@@ -12,6 +12,7 @@ map ,f :e *
 map ,j 
 map ,c :
 map ,nn :read !date +\%H:\%M
+map ,nd :read !date +\%Y-\%m-\%d
 map ,, ,
 map g #6
 map #6g :1
@@ -26,4 +27,6 @@ map sb :di b
 map st :di t
 map se :E 
 map sv :vs 
+map ,eh :co.:s/./-/g
+ab qm 'a,'b
 
