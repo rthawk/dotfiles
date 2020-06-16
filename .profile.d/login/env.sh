@@ -1,4 +1,4 @@
-export HISTSIZE=50000
+export HISTSIZE=100000
 export VISUAL='vi'
 export FCEDIT=$VISUAL
 export PAGER='less'

@@ -44,18 +44,16 @@
 	pager = less -r
 	excludesfile = ~/.gitignore_global
 	editor = vim
+
 [pager]
-    grep = false
+  grep = false
 
 [diff]
   tool = vimdiff
+
 [difftool]
   prompt = false
 
-[color]
-    ui = true
-[push]
-	default = simple
 [filter "media"]
 	clean = git media clean %f
 	smudge = git media smudge %f
