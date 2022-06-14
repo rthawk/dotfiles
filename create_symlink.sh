@@ -6,7 +6,8 @@ mkdir "$BACKUPDIR"
 cd "$(dirname "$0")" || return
 
 echo "backup directory:  $BACKUPDIR"
-echo "dotfiles path:       $PWD"
+echo "dotfiles path   :  $PWD"
+echo ""
 echo "installing dotfiles"
 
 for dotfile in .?*; do
