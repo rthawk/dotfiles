@@ -9,7 +9,7 @@ set wildmode=list:full
 set wildignore+=*.png,*.jpg,*.gif,*.o
 set wildignore+=*DS_Store*
 
-set shm+=I
+set shortmess=xf
 set mouse=a
 set guioptions-=T
 set history=1000
@@ -17,9 +17,6 @@ set history=1000
 if has('packages')
   packadd! matchit
 endif
-
-let g:netrw_banner=0
-let g:netrw_liststyle = 0
 
 colorscheme molokai
 syntax on
