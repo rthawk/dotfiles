@@ -10,11 +10,11 @@ nnoremap ,nn <ESC>i<C-R>=strftime("%H:%M")<CR>
 nnoremap ,nd <ESC>i<C-R>=strftime("* %Y-%m-%d (%a) %H:%M")<CR>
 nnoremap ,nt <ESC>i<C-R>=strftime("%Y-%m-%d")<CR>
 
-nnoremap <C-l> :nohlsearch<CR><C-l>
+nnoremap <silent> <C-l> :nohlsearch<BAR>redraw<CR>
 nnoremap <Leader>bd :bd!<CR>
 
 nnoremap ,m :marks<CR>
-nnoremap ,l :buffers<CR>
+nnoremap ,l :buffers<CR>:b 
 nnoremap ,r :reg<CR>
 nnoremap ,L :tabs<CR>
 nnoremap ,t :tabnew<CR>
@@ -29,7 +29,7 @@ nnoremap ,gj g<C-]>
 nnoremap ,z <C-Z>
 nnoremap ,N :syntax on<CR>
 nnoremap ,F :syntax off<CR>
-nnoremap ,f :find **/*
+nnoremap ,f :find ./**/*
 
 nmap ,yu 0f(lyi(
 nmap ,yl 0yg_
@@ -54,5 +54,6 @@ ia ,m <CR>
 ia ,q ```<CR>
 
 cabbrev ,e <ESC>
+cabbrev ,f <C-F>
 cabbrev ,m <CR>
 

@@ -1,30 +1,31 @@
-set showcmd
-set notitle
-set nocursorline
-set nocursorcolumn
-set hlsearch
-
-set wildmenu
-set wildmode=list:full
-set wildignore+=*.png,*.jpg,*.gif,*.o
-set wildignore+=*DS_Store*
-
-set shortmess=xf
-set mouse=a
-set guioptions-=T
-set history=1000
-
 if has('packages')
-  packadd! matchit
+  packadd matchit
 endif
 
-colorscheme molokai
-syntax on
+if &t_Co > 256
+  if exists("$WT_SESSION")
+    let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
+    let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
+  endif
+  set termguicolors
+endif
 
-set statusline=%n\ %F\ %m%r%h%w%q%y\ \(%l,%v\ %p%%/%L\)\ %=%{&fileencoding}/%{&fileformat}
+if &t_Co >= 256
+  let base16colorspace=256
+endif
+
+if &t_Co > 2
+  colorscheme base16-horizon-dark
+  syntax enable
+endif
+
+let s:status_format_base = '%=%a%m%r%h%w%q%y b:%n %l,%v %{&fileencoding}/%{&fileformat}'
+let &statusline  = '%F %L lines' . s:status_format_base
+let &rulerformat = '%30(' . s:status_format_base . '%)'
 
 if (exists('g:loaded_fugitive') && g:loaded_fugitive == 1)
   set statusline+=\ %{fugitive#statusline()}
+  let &rulerformat = '%50(' . s:status_format_base . ' %{fugitive#statusline()}' . '%)'
 endif
 
 if exists('*SlimuxSendCode')

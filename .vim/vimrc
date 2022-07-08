@@ -1,28 +1,37 @@
-if &compatible
-  set nocompatible
-endif
-
+set nocompatible
 set nobackup
 set noswapfile
-set noundofile
-set nonumber
+
 set autoread
-set ignorecase
+set ruler
+set showcmd
 set showmatch
+set ignorecase
 set smartcase
+set hlsearch
 set ttyfast
+set ttimeout
+set ttimeoutlen=100
+set scrolloff=4
 
 set expandtab
 set tabstop=2
 set shiftwidth=0
 
+set wildmenu
+set wildmode=list:full
+set shortmess=xf
+set mouse=a
 set list
 set listchars=tab:>-,trail:-,nbsp:%,extends:>,precedes:<
 set backspace=indent,eol,nostop
+set history=1000
 set laststatus=0
 set encoding=utf-8
 set fileformats=unix,dos
 set clipboard^=unnamed,unnamedplus
 
-filetype plugin indent on
+if 1
+  filetype plugin indent on
+endif
 
