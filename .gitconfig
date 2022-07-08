@@ -21,6 +21,7 @@
     dc = diff --cached
     b  = branch
     br = branch
+    f  = fetch
     wc = whatchanged
     p  = push
     rv = remote -v
