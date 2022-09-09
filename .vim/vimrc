@@ -9,6 +9,7 @@ set showmatch
 set ignorecase
 set smartcase
 set hlsearch
+set incsearch
 set ttyfast
 set ttimeout
 set ttimeoutlen=100
@@ -18,8 +19,9 @@ set expandtab
 set tabstop=2
 set shiftwidth=0
 
+set completeopt=menuone,popup
 set wildmenu
-set wildmode=list:full
+set wildmode=list:longest,full
 set shortmess=xf
 set mouse=a
 set list
