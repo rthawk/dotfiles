@@ -3,7 +3,7 @@ if has('packages')
 endif
 
 if &t_Co > 256
-  if exists("$WT_SESSION")
+  if exists("$WT_SESSION") || match(&term, 'tmux') > -1
     let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
     let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
   endif
@@ -15,7 +15,7 @@ if &t_Co >= 256
 endif
 
 if &t_Co > 2
-  colorscheme base16-horizon-dark
+  colorscheme base16-horizon-terminal-dark
   syntax enable
 endif
 
