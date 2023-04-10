@@ -5,7 +5,7 @@ nnoremap ,c :
 nnoremap ,s :w<CR>
 nnoremap ,w <C-W>
 inoremap jj <ESC>
-inoremap <C-L> <ESC><C-L>l
+inoremap <C-L> <ESC>:file!<CR>
 
 nnoremap ,nn <ESC>i<C-R>=strftime("%H:%M")<CR>
 nnoremap ,nd <ESC>i<C-R>=strftime("* %Y-%m-%d (%a) %H:%M")<CR>
@@ -22,16 +22,19 @@ nnoremap ,t :tabnew<CR>
 nnoremap ,T :tabs<CR>:tab 
 nnoremap ,o :copen<CR>
 nnoremap ,q :quit<CR>
-nnoremap ,j <C-]>
-nnoremap ,J :jumps<CR>
+nnoremap ,d <C-]>
+nnoremap ,j :jumps<CR>
 nnoremap ,C :changes<CR>
-nnoremap ,gj g<C-]>
 nnoremap ,gg :Ggrep 
 nnoremap ,z <C-Z>
 nnoremap ,N :syntax on<CR>
 nnoremap ,F :syntax off<CR>
-nnoremap ,f :find ./**/*
-nnoremap ,e :Explore<CR>
+nnoremap ,ff :find **/*
+nnoremap ,fg :GitFiles<CR>
+nnoremap ,fo :Files<CR>
+nnoremap <silent>,e :silent! edit %:h<CR>
+nnoremap ,a :e #<CR>
+nn<silent>,e :silent! edit %:h<CR>
 
 nmap ,yu 0f(lyi(
 nmap ,yl 0yg_
@@ -41,7 +44,7 @@ nnoremap <Space>l :lopen<CR>
 nnoremap <Space>o :ls<CR>:b 
 nnoremap <Space>n :bn<CR>
 nnoremap <Space>p :bp<CR>
-nnoremap <Space>e :Explore.<CR>
+nnoremap <Space>e :Rexplore<CR>
 nnoremap <Space>r :%s/
 vnoremap <Space>r :s/
 

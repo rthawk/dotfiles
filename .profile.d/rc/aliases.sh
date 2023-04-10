@@ -26,5 +26,5 @@ alias 2='fg %2'
 alias 3='fg %3'
 
 alias d="sdcv --color"
-alias xclip='xclip -selection clipboard'
+alias xclipc='xclip -selection clipboard'
 

@@ -1,7 +1,7 @@
 
 . $HOME/.shrc
 
-PS1="%3~ %(1j,job:%j ,)%_%(!.#.$) "
+PS1="%3~:%(1j,%j:,)%(!.#.$) "
 HISTFILE=$HOME/.zsh_history
 SAVEHIST=$HISTSIZE
 typeset -U fpath PATH
