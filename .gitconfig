@@ -1,5 +1,6 @@
 [alias]
     a  = add -v
+    ap = add -p
     au = add -uv
     aa = add -Av
     c  = checkout
