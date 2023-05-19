@@ -1,6 +1,6 @@
-.vim/pack/bundle
-.vim/.netrwhist
-.vim/.netrwbook
+vim/pack/bundle
+vim/.netrwhist
+vim/.netrwbook
 .zsh/.zcompdump
 
 .profile.d/*/*.local.*
