@@ -1,6 +1,6 @@
 vim/pack/bundle
 vim/.netrwhist
 vim/.netrwbook
-.zsh/.zcompdump
+zsh/.zcompdump
 
 .profile.d/*/*.local.*
