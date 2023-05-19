@@ -7,3 +7,4 @@ for i in "$HOME"/.profile.d/rc/*.sh ; do
   test -r "$i" && . "$i"
 done ; unset i
 
+# vim: ft=sh

@@ -14,6 +14,8 @@ for dotfile in .?*; do
     case $dotfile in
         .. | .git | .gitignore )
             continue;;
+        [a-z]*)
+            continue;;
         *)
 
             # remove old symlink
