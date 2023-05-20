@@ -39,12 +39,11 @@
     lgn = log --graph --oneline --branches --tags --remotes --name-status
 
 [include]
-  path = .gitconfig.local
-  path = .gitconfig.user
+  path = config.local
+  path = config.user
 
 [core]
 	pager = less -r
-	excludesfile = ~/.gitignore_global
 	editor = vim
 
 [pager]
