@@ -3,6 +3,7 @@ set nobackup
 set noswapfile
 
 set autoread
+set cdhome
 set ruler
 set showcmd
 set showmatch

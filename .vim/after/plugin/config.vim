@@ -2,6 +2,17 @@ if has('packages')
   packadd matchit
 endif
 
+function! IsWSL()
+  let l:uname = substitute(system('uname -r'), '\n', '', '')
+  if has('unix') && l:uname =~? 'microsoft'
+    return 1
+  endif
+endfunction
+
+if IsWSL() && executable('wslview')
+  let g:netrw_browsex_viewer = 'wslview'
+endif
+
 if &t_Co > 256
   if exists("$WT_SESSION")
     let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
@@ -15,7 +26,7 @@ if &t_Co >= 256
 endif
 
 if &t_Co > 2
-  colorscheme base16-horizon-dark
+  colorscheme base16-horizon-terminal-dark
   syntax enable
 endif
 
